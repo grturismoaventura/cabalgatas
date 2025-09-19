@@ -1,0 +1,170 @@
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-image: url('/fondoinicio.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 120px; /* Aproximadamente 5cm */
+  width: auto; /* Mantiene la proporción */
+  background: transparent;
+  object-fit: contain;
+  max-width: 120px;
+}
+
+.logo h2 {
+  color: #228fc5;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navLinks a:hover {
+  color: #0f8480;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #228fc5;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+.mobileMenu {
+  display: none;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 0;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNavLinks li {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mobileNavLinks a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.mobileNavLinks a:hover {
+  background-color: #f9fafb;
+  color: #228fc5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactInfo {
+    gap: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .contactItem span {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .logo img {
+    height: 80px; /* Más pequeño en móviles */
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topBar {
+    padding: 0.25rem 0;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+}

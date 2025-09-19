@@ -1,0 +1,279 @@
+/* Footer Styles */
+.footer {
+  background: #111827;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.footerSection h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #229cc5;
+}
+
+.footerSection h4,
+.footerSubtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.footerSection h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footerTitle {
+  color: #0f8480;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.footerDescription {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.socialMedia h4 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  border-radius: 50%;
+  color: #0f8480;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background: #0f8480;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.75rem;
+}
+
+.footerLinks a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footerLinks a:hover {
+  color: #0f8480;
+}
+
+.footerLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #0f8480;
+  transition: width 0.3s ease;
+}
+
+.footerLinks a:hover::after {
+  width: 100%;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #d1d5db;
+}
+
+.contactItem svg {
+  color: #0f8480;
+  flex-shrink: 0;
+}
+
+.newsletter {
+  margin-top: 2rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.newsletterInput::placeholder {
+  color: #d1d5db;
+}
+
+.newsletterInput:focus {
+  outline: none;
+  border-color: #0f8480;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletterButton {
+  background: #0f8480;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletterButton:hover {
+  background: #16A34A;
+  transform: translateY(-1px);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+}
+
+.footerBottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBottomContent p {
+  color: #9ca3af;
+  margin: 0;
+}
+
+.footerBottomLinks {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footerBottomLinks a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footerBottomLinks a:hover {
+  color: #0f8480;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .newsletterButton {
+    text-align: center;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerBottomLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerContent {
+    padding: 2rem 0;
+  }
+
+  .footerSection h3,
+  .footerTitle {
+    font-size: 1.25rem;
+  }
+
+  .footerSection h4,
+  .footerSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .socialIcons a {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .socialIcons a svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .footerBottomLinks {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
