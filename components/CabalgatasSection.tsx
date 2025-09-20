@@ -31,7 +31,7 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$1.080.000',
     duration: '5 DIAS',
     difficulty: 'Intermedio',
-    image: 'avion.png',
+    image: '/avion.png',
     pdfUrl: '/Cabalgata Avión de los Uruguyos.pdf.pdf',
   },
   {
@@ -41,7 +41,7 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$390.000',
     duration: '2 DIAS ',
     difficulty: 'Principiante',
-    image: 'cabalgataLosMolles.png',
+    image: '/cabalgataLosMolles.png',
     pdfUrl: '/cabalgataLosMolles.pdf',
   },
   {
@@ -51,7 +51,7 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$890.000',
     duration: '5 DIAS',
     difficulty: 'Principiante',
-    image: 'cabalgata3valles.png',
+    image: '/cabalgata3valles.png',
     pdfUrl: '/cabalgata3valles.pdf',
   },
   {
