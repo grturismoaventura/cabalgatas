@@ -1,5 +1,4 @@
 cabalgata3valles.pdf filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
 lfs filter=lfs diff=lfs merge=lfs -text
 track filter=lfs diff=lfs merge=lfs -text
 cabalgata3valles.pdf,git filter=lfs diff=lfs merge=lfs -text
@@ -13,6 +12,5 @@ cabalgata3valles.png,git filter=lfs diff=lfs merge=lfs -text
 cabalgataLosMolles.png,git filter=lfs diff=lfs merge=lfs -text
 expertosinicio.png,git filter=lfs diff=lfs merge=lfs -text
 cruceDeLosAndesinicio.png,git filter=lfs diff=lfs merge=lfs -text
-*.pdf filter=lfs diff=lfs merge=lfs -text
 *.png !text !filter !merge !diff
 *.pdf !text !filter !merge !diff
