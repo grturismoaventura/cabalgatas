@@ -22,7 +22,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '7 días',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
-    pdfUrl: '/cruce-de-los-andes.pdf',
+    pdfUrl: '/pdfs/cruce-de-los-andes.pdf',
   },
   {
     id: 'cabalgata-avion-de-los-uruguayos',
@@ -31,8 +31,8 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$1.080.000',
     duration: '5 DIAS',
     difficulty: 'Intermedio',
-    image: '/avion.png',
-    pdfUrl: '/Cabalgata Avión de los Uruguyos.pdf.pdf',
+    image: 'avion.png',
+    pdfUrl: '/pdfs/cabalgata-avion-uruguayos.pdf',
   },
   {
     id: 'cabalgata-los-molles',
@@ -41,8 +41,8 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$390.000',
     duration: '2 DIAS ',
     difficulty: 'Principiante',
-    image: '/cabalgataLosMolles.png',
-    pdfUrl: '/cabalgataLosMolles.pdf',
+    image: 'cabalgataLosMolles.png',
+    pdfUrl: '/pdfs/cabalgataLosMolles.pdf',
   },
   {
     id: 'cabalgata-3-valles',
@@ -50,9 +50,9 @@ const cabalgatasData: CabalgataProps[] = [
     description: 'En esta experiencia de tres días vas a poder disfrutar de la magia de los atardeceres.',
     price: '$890.000',
     duration: '5 DIAS',
-    difficulty: 'Principiante',
-    image: '/cabalgata3valles.png',
-    pdfUrl: '/cabalgata3valles.pdf',
+    difficulty: 'Avanzado',
+    image: 'cabalgata3valles.png',
+    pdfUrl: '/pdfs/cabalgata3valles.pdf',
   },
   {
     id: 'cabalgata-expertos',
@@ -61,8 +61,8 @@ const cabalgatasData: CabalgataProps[] = [
     price: '$1.420.000',
     duration: '5 DIAS',
     difficulty: 'Avanzado',
-    image: '/expertosinicio.png',
-    pdfUrl: '/cabalgataexpertos.pdf',
+    image: 'expertosinicio.png',
+    pdfUrl: '/pdfs/cabalgataexpertos.pdf',
   }
 ];
 
