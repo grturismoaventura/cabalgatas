@@ -32,7 +32,7 @@
 .sectionTitle {
   font-size: 3.5rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #3b9aba 0%, #3b9aba 100%);
+  background: linear-gradient(135deg, #0f8480 0%, #0f8480 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -340,20 +340,22 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  color: white;
+  background: white;
+  color: #0f8480;
   text-decoration: none;
+  border: 2px solid #0f8480;
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(15, 132, 128, 0.15);
 }
 
 .moreInfoButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  box-shadow: 0 8px 20px rgba(15, 132, 128, 0.25);
+  background: #0f8480;
+  color: white;
 }
 
 .moreInfoButton:active {

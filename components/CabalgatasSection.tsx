@@ -16,27 +16,27 @@ interface CabalgataProps {
 const cabalgatasData: CabalgataProps[] = [
   {
     id: 'Cruce de los Andes',
-    title: 'Cruce de los Andes', 
+    title: 'CRUCE DE LOS ANDES', 
     description: 'La travesía más auténtica de los Andes',
     price: '$1.440.000',
-    duration: '7 días',
+    duration: '7 DIAS 6 NOCHES',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
     pdfUrl: '/pdfs/cruce-de-los-andes.pdf',
   },
   {
     id: 'cabalgata-avion-uruguayos',
-    title: 'Cabalgata Avion de los Uruguayos',
+    title: 'CABALGATA AVION DE LOS URUGUAYOS',
     description: 'Expedición por el escenario de "La tragedia de Los Andes"',
     price: '$1.080.000',
-    duration: '5 DIAS',
+    duration: '5 DIAS 4 NOCHES',
     difficulty: 'Intermedio',
     image: 'avion.png',
     pdfUrl: '/pdfs/cabalgata-avion-uruguayos.pdf',
   },
   {
     id: 'cabalgata-los-molles',
-    title: 'Cabalgata Los Molles',
+    title: 'CABALGATA LOS MOLLES',
     description: 'Vivir la montaña en dos días únicos',
     price: '$390.000',
     duration: '2 DIAS 1 NOCHE',
@@ -112,7 +112,7 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
               rel="noopener noreferrer"
               className={styles.moreInfoButton}
             >
-              📄 Más Información
+              Más Información
             </a>
           )}
         </div>
