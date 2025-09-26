@@ -25,7 +25,7 @@ const cabalgatasData: CabalgataProps[] = [
     pdfUrl: '/pdfs/cruce-de-los-andes.pdf',
   },
   {
-    id: 'cabalgata-avion-de-los-uruguayos',
+    id: 'cabalgata-avion-uruguayos',
     title: 'Cabalgata Avion de los Uruguayos',
     description: 'Expedición por el escenario de "La tragedia de Los Andes"',
     price: '$1.080.000',
@@ -39,7 +39,7 @@ const cabalgatasData: CabalgataProps[] = [
     title: 'Cabalgata Los Molles',
     description: 'Vivir la montaña en dos días únicos',
     price: '$390.000',
-    duration: '2 DIAS ',
+    duration: '2 DIAS 1 NOCHE',
     difficulty: 'Principiante',
     image: 'cabalgataLosMolles.png',
     pdfUrl: '/pdfs/cabalgataLosMolles.pdf',
@@ -49,7 +49,7 @@ const cabalgatasData: CabalgataProps[] = [
     title: 'CABALGATA 3 VALLES',
     description: 'En esta experiencia de tres días vas a poder disfrutar de la magia de los atardeceres.',
     price: '$890.000',
-    duration: '5 DIAS',
+    duration: '3 DIAS 2 NOCHES',
     difficulty: 'Avanzado',
     image: 'cabalgata3valles.png',
     pdfUrl: '/pdfs/cabalgata3valles.pdf',
@@ -59,11 +59,21 @@ const cabalgatasData: CabalgataProps[] = [
     title: 'CABALGATA EXPERTOS',
     description: 'Una experiencia desafiante para jinetes experimentados en terreno montañoso.',
     price: '$1.420.000',
-    duration: '5 DIAS',
+    duration: '5 DIAS 4 NOCHES',
     difficulty: 'Avanzado',
     image: 'expertosinicio.png',
     pdfUrl: '/pdfs/cabalgataexpertos.pdf',
-  }
+  },
+  {
+    id: 'Semana Santa',
+    title: 'CABALGATA DE SEMANA SANTA', 
+    description: 'Expedición especial de Semana Santa con actividades culturales y paisajes únicos',
+    price: 'PROXIMAMENTE',
+    duration: '4 DIAS 3 NOCHES',
+    difficulty: 'Intermedio',
+    image: '/cabalgatasemanasanta.png',
+    pdfUrl: '/pdfs/cabalgatasemanaSanta.pdf',
+  },
 ];
 
 function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
