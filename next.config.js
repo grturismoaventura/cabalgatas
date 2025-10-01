@@ -5,7 +5,7 @@ const nextConfig = {
   },
   images: { 
     unoptimized: false,
-    domains: ['images.pexels.com'],
+    domains: ['images.pexels.com', 'images.unsplash.com'],
     formats: ['image/webp', 'image/avif'],
   },
   compress: true,
