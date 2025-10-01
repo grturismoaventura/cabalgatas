@@ -68,6 +68,54 @@
             border-left: 5px solid #c86e62;
         }
         
+        .not-included-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            border-left: 5px solid #d32f2f;
+        }
+        
+        .not-included-section h3 {
+            color: #d32f2f;
+            margin-top: 0;
+        }
+        
+        .not-included-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .not-included-section li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #d32f2f;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .not-included-section li:before {
+            content: "✗";
+            color: #d32f2f;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
                 .price-highlight {
             background: #c86e62;
             color: white;
@@ -318,8 +366,9 @@
         </div>
     </div>
 
-    <div class="content-section">
-        <h3>✅ QUÉ INCLUYE LA EXPEDICIÓN ESPECIAL</h3>
+    <div class="services-container">
+        <div class="content-section">
+            <h3>✅ QUÉ INCLUYE LA EXPEDICIÓN ESPECIAL</h3>
         <div class="includes-grid">
             <div class="include-item">
                 <h4>🐎 Equinos Especializados</h4>
@@ -357,6 +406,25 @@
                     <li>Seguro de expedición completo</li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="not-included-section">
+        <h3>❌ SERVICIOS NO INCLUIDOS</h3>
+        <ul>
+            <li>Vuelos o traslados desde/hacia Mendoza ciudad</li>
+            <li>Seguro de accidentes personales</li>
+            <li>Equipo personal de montaña (ropa técnica, calzado especializado)</li>
+            <li>Bebidas alcohólicas durante las comidas</li>
+            <li>Propinas para guías y personal de apoyo</li>
+            <li>Gastos personales (compras, comunicaciones, etc.)</li>
+            <li>Medicamentos personales</li>
+            <li>Equipo de fotografía profesional</li>
+            <li>Alojamiento adicional en Mendoza antes o después del tour</li>
+            <li>Actividades opcionales no mencionadas en el itinerario</li>
+            <li>Gastos médicos o de evacuación en caso de emergencia</li>
+            <li>Cualquier servicio no especificado en "Servicios Incluidos"</li>
+        </ul>
         </div>
     </div>
 

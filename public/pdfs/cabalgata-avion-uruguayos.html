@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-<he        .title {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
+<head>
+    <meta charset="UTF-8">
+    <title>Cabalgata Avión de los Uruguayos - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -30,8 +34,8 @@
         }
         
         .title {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
+            background: #c86e62;
+            color: #d9d9d9;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -63,14 +67,62 @@
         .content-section {
             margin: 30px 0;
             padding: 20px;
-            background: #f9f9f9;
+            background: #d9d9d9;
             border-radius: 8px;
             border-left: 5px solid #c86e62;
         }
         
+        .not-included-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            border-left: 5px solid #d32f2f;
+        }
+        
+        .not-included-section h3 {
+            color: #d32f2f;
+            margin-top: 0;
+        }
+        
+        .not-included-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .not-included-section li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #d32f2f;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .not-included-section li:before {
+            content: "✗";
+            color: #d32f2f;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
                 .price-highlight {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
+            background: #c86e62;
+            color: #d9d9d9;
             padding: 15px;
             border-radius: 10px;
             text-align: center;
@@ -98,8 +150,8 @@
         }
         
         .survival-box {
-            background: linear-gradient(135deg, #20a39e, #0f8480);
-            color: white;
+            background: #c86e62;
+            color: #d9d9d9;
             padding: 20px;
             border-radius: 10px;
             margin: 25px 0;
@@ -107,7 +159,7 @@
         }
         
         .itinerary {
-            background: #fff;
+            background: #d9d9d9;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -115,8 +167,8 @@
         }
         
                 .itinerary-header {
-            background: #0f8480;
-            color: white;
+            background: #c86e62;
+            color: #d9d9d9;
             padding: 10px;
             border-radius: 5px;
             margin: 20px 0 10px 0;
@@ -125,7 +177,7 @@
         .day-item {
             padding: 20px;
             border-bottom: 1px solid #eee;
-            background: linear-gradient(135deg, #f8f9fa, #fff);
+            background: linear-gradient(135deg, #d9d9d9, #d9d9d9);
         }
         
         .day-item:last-child {
@@ -133,8 +185,8 @@
         }
         
                 .day-title {
-            background: #20a39e;
-            color: white;
+            background: #c86e62;
+            color: #d9d9d9;
             padding: 8px 15px;
             border-radius: 20px;
             display: inline-block;
@@ -150,20 +202,20 @@
         }
         
         .include-item {
-            background: white;
+            background: #d9d9d9;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #0f8480;
+            border-left: 4px solid #c86e62;
         }
         
         .include-item h4 {
-            color: #0f8480;
+            color: #c86e62;
             margin: 0 0 10px 0;
         }
         
         .highlight {
-            background: #fff3cd;
+            background: #d9d9d9;
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #ffc107;
@@ -176,7 +228,7 @@
         }
         
         li {
-            background: white;
+            background: #d9d9d9;
             margin: 8px 0;
             padding: 12px 15px;
             border-radius: 5px;
@@ -209,33 +261,32 @@
         <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
         <div class="title">
             <h1>CABALGATA AVIÓN DE LOS URUGUAYOS</h1>
-            <h2>Una historia de supervivencia y esperanza</h2>
+            
         </div>
     </div>
 
     <img src="/avion.png" alt="Avión de los Uruguayos" class="main-image">
 
     <div class="survival-box">
-        <h3>✈️ EXPEDICIÓN AL LUGAR DEL MILAGRO</h3>
-        <p>Visita el lugar donde ocurrió uno de los casos de supervivencia más extraordinarios de la historia moderna. Una experiencia que marca el alma.</p>
+        <h3>EXPEDICIÓN AL LUGAR DEL MILAGRO</h3>
+        <p>El accidente de Los Andes 1972 no solo nos cuenta una historia de Supervivencia, si no que también nos deja una profunda reflexión sobre  la resiliencia , la cooperación, el liderazgo y la importancia de los valores humanos en situaciones extremas para aplicarlas en nuestra vida diaria.</p>
     </div>
 
     <div class="content-section">
-        <h3>🏔️ Descripción de la Experiencia</h3>
-        <p>Una emotiva expedición de 5 días hacia el lugar donde se estrelló el vuelo 571 de la Fuerza Aérea Uruguaya en 1972. Esta cabalgata combina aventura extrema con una profunda reflexión sobre la supervivencia humana, la esperanza y la fortaleza del espíritu.</p>
-        <p>Acompañados por guías especializados y, ocasionalmente, por sobrevivientes del accidente, conocerás la historia completa de los 72 días de supervivencia en la cordillera.</p>
+        <h3>Historia detras de la experiencia</h3>
+        <p>El vuelo 571 de la Fuerza Aérea Uruguaya se estrelló en la Cordillera de los Andes el 13 de octubre de 1972.</p>
+        <p>A bordo iban 45 personas: jugadores del equipo de rugby Old Christians Club de Montevideo, junto a familiares, amigos y tripulantes.</p>
+        <p>16 fueron los sobrevivientes que pasaron 72 días en condiciones extremas, hasta que fueron rescatados.</p>
     </div>
 
-    <div class="reflection-box">
-        <p>El accidente de Los Andes 1972 no solo nos cuenta una historia de Supervivencia, si no que también nos deja una profunda reflexión sobre la resiliencia, la cooperación, el liderazgo y la importancia de los valores humanos en situaciones extremas para aplicarlas en nuestra vida diaria.</p>
-    </div>
+    
 
     <div class="price-highlight">
-        <h3>💰 INFORMACIÓN DEL TOUR ESPECIAL</h3>
+        <h3> INFORMACIÓN DEL TOUR ESPECIAL</h3>
         <div class="price-grid">
             <div class="price-item">
                 <strong>PRECIO</strong><br>
-                $1.320.000 CLP<br>
+                $1.080.000<br>
                 <small>por persona</small>
             </div>
             <div class="price-item">
@@ -249,139 +300,98 @@
                 <small>Experiencia requerida</small>
             </div>
             <div class="price-item">
-                <strong>ALTITUD</strong><br>
-                HASTA 3,600m<br>
-                <small>lugar del accidente</small>
+                <strong>FECHA</strong><br>
+
+                8 DE FEBRERO DE 2026 <br>
+                
             </div>
         </div>
     </div>
 
     <div class="itinerary">
         <div class="itinerary-header">
-            <h3>📅 ITINERARIO DE LA EXPEDICIÓN - 5 DÍAS</h3>
+            <h3>PROGRAMA</h3>
         </div>
         
         <div class="day-item">
             <div class="day-title">DÍA 1 - Preparación y Contexto</div>
-            <p><strong>8:00 AM:</strong> Reunión informativa sobre la tragedia de 1972</p>
-            <p><strong>9:30 AM:</strong> Salida hacia Valle de Las Lágrimas</p>
-            <p><strong>11:00 AM:</strong> Encuentro con caballos entrenados para alta montaña</p>
-            <p><strong>12:00 PM:</strong> Primera cabalgata hacia campamento base</p>
-            <p><strong>2:00 PM:</strong> Almuerzo y relatos de supervivencia</p>
-            <p><strong>4:00 PM:</strong> Preparación física y mental para el ascenso</p>
-            <p><strong>7:00 PM:</strong> Cena reflexiva y descanso</p>
+            <p> El equipo te espera en los Molles, en El Montañés después de las 18 hs. 
+Los guías que te acompañarán en esta experiencia te recibirán y se presentarán. Se ofrecerá una charla detallada sobre el recorrido, seguida de la " Aduana”, donde seleccionaremos todos los elementos necesarios para la travesía que llevaremos en las dos alforjas. El resto de tus pertenencias y equipaje quedarán a resguardo en las instalaciones. 
+Cena y pernocte en el hostel.</p>
+            
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍA 2 - Ascenso al Valle de las Lágrimas</div>
-            <p><strong>6:00 AM:</strong> Desayuno energético temprano</p>
-            <p><strong>7:30 AM:</strong> Inicio del ascenso por terreno difícil</p>
-            <p><strong>10:00 AM:</strong> Primera vista del glaciar donde cayó el avión</p>
-            <p><strong>12:30 PM:</strong> Almuerzo con vista a la cordillera</p>
-            <p><strong>2:30 PM:</strong> Continuación del ascenso técnico</p>
-            <p><strong>6:00 PM:</strong> Llegada al refugio intermedio</p>
-            <p><strong>8:30 PM:</strong> Cena y charla sobre técnicas de supervivencia</p>
+            <div class="day-title">DÍA 2 - Ascenso a Tres Lagunas</div>
+            <p>Desayuno y salida desde el Club Andino Pehuenche Hostel hacia el Puesto Araya. Almuerzo con viandas frías. Con la ayuda de los guías y baqueanos, seleccionaremos los caballos para cada pasajero y comenzaremos la cabalgata.
+ Al llegar al lugar de pernocte, “Tres Lagunas”, a 2800 metros sobre el nivel del mar, cerca de la confluencia del arroyo Barroso y Lágrimas, armaremos las carpas y prepararemos las “camas” con lonas, parte de la montura, bolsa de dormir y frazadas. Además, el ayudante de guía preparará el fuego para cocinar un delicioso asado. 
+La noche será bajo las estrellas, junto al fogón, la guitarra y el silencio de Los Andes.</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍA 3 - Llegada al Lugar del Accidente</div>
-            <p><strong>5:00 AM:</strong> Desayuno de expedición</p>
-            <p><strong>6:30 AM:</strong> Ascenso final hacia el lugar del accidente</p>
-            <p><strong>10:00 AM:</strong> Llegada a los restos del Fairchild F-227</p>
-            <p><strong>10:30 AM:</strong> Momento de silencio y reflexión</p>
-            <p><strong>12:00 PM:</strong> Almuerzo junto a los restos del avión</p>
-            <p><strong>2:00 PM:</strong> Exploración del sitio y relatos detallados</p>
-            <p><strong>4:00 PM:</strong> Ceremonia conmemorativa</p>
-            <p><strong>6:00 PM:</strong> Instalación en campamento especial</p>
-            <p><strong>8:00 PM:</strong> Cena bajo las estrellas</p>
+            <div class="day-title">DÍA 3 - Llegada a la Cruz recordatoria</div>
+            <p>Desayuno. Salida hacia la cruz recordatoria. Llegada a las 14:00 hs, alcanzando una altura de 3.700 metros. Recorrida del lugar y almuerzo frío. 
+Regreso al campamento Tres Lagunas para merienda, cena y pernocte.
+</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍA 4 - Ruta de los Sobrevivientes</div>
-            <p><strong>7:00 AM:</strong> Desayuno en el campamento histórico</p>
-            <p><strong>8:30 AM:</strong> Recorrido por la ruta de escape de los sobrevivientes</p>
-            <p><strong>11:00 AM:</strong> Visita al lugar donde fueron rescatados</p>
-            <p><strong>1:00 PM:</strong> Almuerzo en el punto de rescate</p>
-            <p><strong>3:00 PM:</strong> Inicio del descenso hacia refugio base</p>
-            <p><strong>6:30 PM:</strong> Llegada al refugio intermedio</p>
-            <p><strong>8:00 PM:</strong> Cena de reflexión sobre la experiencia</p>
+            <div class="day-title">DÍA 4 - Retorno al hostel</div>
+            <p>Desayuno. Desarme del campamento. Traslado al Club Andino Pehuenche Hostel para una ducha reparadora y cena de despedida.</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍA 5 - Retorno y Reflexión</div>
-            <p><strong>8:00 AM:</strong> Último desayuno en la montaña</p>
-            <p><strong>9:30 AM:</strong> Descenso final hacia el valle</p>
-            <p><strong>12:00 PM:</strong> Almuerzo de clausura</p>
-            <p><strong>2:00 PM:</strong> Sesión de reflexión grupal</p>
-            <p><strong>3:30 PM:</strong> Retorno a Mendoza</p>
-            <p><strong>6:00 PM:</strong> Llegada y despedida emotiva</p>
+            <div class="day-title">DÍA 5 - Ultimo dia </div>
+            <p>Desayuno. Fin de nuestros servicios.</p>
         </div>
     </div>
 
-    <div class="content-section">
-        <h3>✅ QUÉ INCLUYE LA EXPEDICIÓN ESPECIAL</h3>
-        <div class="includes-grid">
-            <div class="include-item">
-                <h4>🐎 Equinos Especializados</h4>
-                <ul>
-                    <li>Caballos entrenados para terreno extremo</li>
-                    <li>Equipo de alta montaña especializado</li>
-                    <li>Sistema de comunicación satelital</li>
-                    <li>Equipos de rescate de emergencia</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>📚 Experiencia Educativa</h4>
-                <ul>
-                    <li>Guía especialista en la historia</li>
-                    <li>Material documental histórico</li>
-                    <li>Encuentro con sobrevivientes (ocasional)</li>
-                    <li>Libro conmemorativo incluido</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>🍽️ Alimentación Adaptada</h4>
-                <ul>
-                    <li>Comidas de alta energía</li>
-                    <li>Raciones de supervivencia educativas</li>
-                    <li>Bebidas calientes especiales</li>
-                    <li>Suplementos nutricionales</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>🏕️ Campamento Especial</h4>
-                <ul>
-                    <li>Refugios de alta montaña</li>
-                    <li>Equipos térmicos especializados</li>
-                    <li>Transporte en helicóptero (emergencia)</li>
-                    <li>Seguro de expedición completo</li>
-                </ul>
-            </div>
+    <div class="services-container">
+        <div class="content-section">
+            <h3>SERVICIOS INCLUIDOS</h3>
+            
+                
+            
+                    <ul>
+                        <li>Recepción en El Montañes, Los Molles.</li>
+                        <li>Chequeo del material y la indumentaria.</li>
+                        <li>Traslado a la zona de El Sosneado.</li>
+                        <li>Bebidas y comidas en campamento y durante la marcha.</li>
+                        <li>Servicio de baño.</li>
+                        <li>Guías y baqueanos especializados.</li>
+                        <li>Mulas de transporte de carga.</li>
+                        <li>Equipo de primeros auxilios.</li>
+                        <li>Seguro de Responsabilidad Civil.</li>
+                        <li>Permiso de ingreso a Cuenca del Atuel.</li>
+                        <li>2 noches de alojamiento en Club Andino Pehuenche Hostel, con pensión completa, sin bebidas.</li>
+                        <li>3 días de travesía a caballo.</li>
+                        <li>2 noches de alojamiento en la montaña con pensión completa.</li>
+                        <li>Comidas y bebidas durante la cabalgata, actividades.</li>
+                        <li>Equipo completo para la cabalgata: caballos, monturas y mulas cargueras.</li>
+                        <li>Comunicación satelital en caso de urgencias.</li>
+                    </ul> 
+        </div>
+
+        <div class="not-included-section">
+            <h3>SERVICIOS NO INCLUIDOS</h3>
+            <ul>
+                <li>Vuelos o traslados desde/hacia Mendoza ciudad</li>
+                <li>Seguro de accidentes personales</li>
+                <li>Equipo personal de montaña (ropa técnica, calzado especializado)</li>
+                <li>Bebidas alcohólicas durante las comidas</li>
+                <li>Propinas para guías y personal de apoyo</li>
+                <li>Gastos personales (compras, comunicaciones, etc.)</li>
+                <li>Medicamentos personales</li>
+                <li>Equipo de fotografía profesional</li>
+                <li>Alojamiento adicional en Mendoza antes o después del tour</li>
+                <li>Actividades opcionales no mencionadas en el itinerario</li>
+                <li>Gastos médicos o de evacuación en caso de emergencia</li>
+                <li>Cualquier servicio no especificado en "Servicios Incluidos"</li>
+            </ul>
         </div>
     </div>
 
-    <div class="survival-box">
-        <h3>📖 LA HISTORIA QUE CONMOVIÓ AL MUNDO</h3>
-        <div class="includes-grid" style="margin-top: 20px;">
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>✈️ El Accidente</h4>
-                <p>13 de octubre de 1972, vuelo 571 con 45 personas a bordo se estrella en la cordillera</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>❄️ La Supervivencia</h4>
-                <p>72 días en la montaña con temperaturas de -30°C y sin provisiones</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>🚁 El Rescate</h4>
-                <p>23 de diciembre de 1972, 16 sobrevivientes son rescatados</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>💪 La Lección</h4>
-                <p>Ejemplo extraordinario de fortaleza humana y trabajo en equipo</p>
-            </div>
-        </div>
-    </div>
-
+    
     <div class="highlight">
         <h3>🎒 EQUIPAMIENTO PARA EXPEDICIÓN EXTREMA</h3>
         <div class="includes-grid">
