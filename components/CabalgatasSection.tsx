@@ -22,7 +22,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '7 DIAS 6 NOCHES',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
-    pdfUrl: '/pdfs/cruce-de-los-andes.pdf',
+    pdfUrl: '/pdfs/cruce-de-los-andes.html',
   },
   {
     id: 'cabalgata-avion-uruguayos',
@@ -32,7 +32,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '5 DIAS 4 NOCHES',
     difficulty: 'Intermedio',
     image: 'avion.png',
-    pdfUrl: '/pdfs/cabalgata-avion-uruguayos.pdf',
+    pdfUrl: '/pdfs/cabalgata-avion-uruguayos.html',
   },
   {
     id: 'cabalgata-los-molles',
@@ -42,7 +42,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '2 DIAS 1 NOCHE',
     difficulty: 'Principiante',
     image: 'cabalgataLosMolles.png',
-    pdfUrl: '/pdfs/cabalgataLosMolles.pdf',
+    pdfUrl: '/pdfs/cabalgataLosMolles.html',
   },
   {
     id: 'cabalgata-3-valles',
@@ -52,7 +52,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '3 DIAS 2 NOCHES',
     difficulty: 'Principiante',
     image: 'cabalgata3valles.png',
-    pdfUrl: '/pdfs/cabalgata3valles.pdf',
+    pdfUrl: '/pdfs/cabalgata3valles.html',
   },
   {
     id: 'cabalgata-expertos',
@@ -62,7 +62,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '7  DIAS 6 NOCHES',
     difficulty: 'Avanzado',
     image: 'expertosinicio.png',
-    pdfUrl: '/pdfs/cabalgataexpertos.pdf',
+    pdfUrl: '/pdfs/cabalgataexpertos.html',
   },
   {
     id: 'Semana Santa',
@@ -72,7 +72,7 @@ const cabalgatasData: CabalgataProps[] = [
     duration: '4 DIAS 3 NOCHES',
     difficulty: 'Intermedio',
     image: '/cabalgatasemanasanta.png',
-    pdfUrl: '/pdfs/cabalgatasemanaSanta.pdf',
+    pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
   },
 ];
 
