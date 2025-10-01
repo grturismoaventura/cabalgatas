@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cabalgata Expertos - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 25px 0;
+        }
+        
+        .itinerary-header {
+            background: #0f8480;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .day-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            color: #0f8480;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f8480;
+        }
+        
+        .include-item h4 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #0f8480;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        li:before {
+            content: "✓";
+            color: #0f8480;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>CABALGATA EXPERTOS</h1>
+            <h2>Una experiencia desafiante para jinetes experimentados</h2>
+        </div>
+    </div>
+
+    <img src="/expertosinicio.png" alt="Cabalgata Expertos" class="main-image">
+
+    <div class="warning-box">
+        <h3>⚠️ ATENCIÓN - SOLO PARA EXPERTOS</h3>
+        <p>Esta cabalgata requiere experiencia previa en equitación y excelente condición física. No apta para principiantes.</p>
+    </div>
+
+    <div class="content-section">
+        <h3>🏔️ Descripción de la Experiencia</h3>
+        <p>Una experiencia desafiante para jinetes experimentados en terreno montañoso de alta dificultad. Durante 7 días recorreremos senderos de alta montaña, cruzaremos ríos, navegaremos terrenos rocosos y alcanzaremos altitudes de hasta 3,500 metros sobre el nivel del mar.</p>
+        <p>Esta expedición está diseñada para aquellos que buscan llevar sus habilidades ecuestres al límite en algunos de los paisajes más espectaculares y desafiantes de los Andes argentinos.</p>
+    </div>
+
+    <div class="price-highlight">
+        <h3>💰 INFORMACIÓN DEL TOUR</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <strong>PRECIO</strong><br>
+                $1.420.000 CLP<br>
+                <small>por persona</small>
+            </div>
+            <div class="price-item">
+                <strong>DURACIÓN</strong><br>
+                7 DÍAS<br>
+                <small>6 noches</small>
+            </div>
+            <div class="price-item">
+                <strong>DIFICULTAD</strong><br>
+                AVANZADO<br>
+                <small>Solo expertos</small>
+            </div>
+            <div class="price-item">
+                <strong>ALTITUD</strong><br>
+                HASTA 3,500m<br>
+                <small>sobre el nivel del mar</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="itinerary">
+        <div class="itinerary-header">
+            <h3>📅 ITINERARIO EXTREMO - 7 DÍAS</h3>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍAS 1-2 - Aclimatación y Ascenso Inicial</div>
+            <p><strong>Día 1:</strong> Salida temprana desde Mendoza hacia el punto base (2,000m). Encuentro con caballos especialmente entrenados para alta montaña. Primeras 4 horas de cabalgata de aclimatación.</p>
+            <p><strong>Día 2:</strong> Ascenso gradual hasta los 2,500m. Técnicas de manejo en terreno rocoso. Campamento base en refugio de alta montaña. Preparación de equipos especializados.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍAS 3-4 - Travesía por Senderos de Montaña</div>
+            <p><strong>Día 3:</strong> Travesía por el Sendero del Cóndor (3,000m). Cruce de ríos de montaña. Navegación por terreno de glaciares. Técnicas avanzadas de equitación en hielo.</p>
+            <p><strong>Día 4:</strong> Ascenso al Paso de los Vientos (3,200m). Cabalgata por filo de montaña. Vista panorámica del Aconcagua. Campamento en refugio de emergencia.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍAS 5-6 - Exploración de Valles Remotos</div>
+            <p><strong>Día 5:</strong> Descenso técnico al Valle Perdido. Exploración de formaciones geológicas únicas. Práctica de técnicas de supervivencia en montaña.</p>
+            <p><strong>Día 6:</strong> Ascenso final al punto más alto del tour (3,500m). Técnicas avanzadas de manejo del caballo en altitud. Ceremonia de graduación para expertos.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍA 7 - Descenso y Retorno</div>
+            <p><strong>Mañana:</strong> Descenso gradual y seguro por senderos alternativos. Evaluación de la experiencia y técnicas aprendidas.</p>
+            <p><strong>Tarde:</strong> Almuerzo de celebración en el refugio base. Retorno a Mendoza con paradas en miradores especiales.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>✅ QUÉ INCLUYE EL TOUR EXTREMO</h3>
+        <div class="includes-grid">
+            <div class="include-item">
+                <h4>🐎 Equinos Especializados</h4>
+                <ul>
+                    <li>Caballos entrenados para alta montaña</li>
+                    <li>Equipo de seguridad extrema</li>
+                    <li>Monturas especiales para terreno difícil</li>
+                    <li>Equipos de emergencia</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>👨‍🦲 Equipo Experto</h4>
+                <ul>
+                    <li>Guía certificado en alta montaña</li>
+                    <li>Baqueano experto local</li>
+                    <li>Paramédico especializado</li>
+                    <li>Comunicación satelital</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🍽️ Alimentación Especializada</h4>
+                <ul>
+                    <li>Comidas de alta energía</li>
+                    <li>Suplementos nutricionales</li>
+                    <li>Bebidas isotónicas</li>
+                    <li>Raciones de emergencia</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🏠 Alojamiento Extremo</h4>
+                <ul>
+                    <li>Refugios de alta montaña</li>
+                    <li>Equipos de camping especializado</li>
+                    <li>Transporte 4x4 especializado</li>
+                    <li>Seguro de alta montaña</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3>📋 REQUISITOS OBLIGATORIOS</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>🏇 Experiencia Requerida</h4>
+                <ul style="color: #333;">
+                    <li>Mínimo 5 años de experiencia en equitación</li>
+                    <li>Experiencia previa en cabalgatas de montaña</li>
+                    <li>Certificado médico de aptitud física</li>
+                    <li>No apto para menores de 18 años</li>
+                </ul>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>💪 Condición Física</h4>
+                <ul style="color: #333;">
+                    <li>Excelente estado físico</li>
+                    <li>Resistencia cardiovascular alta</li>
+                    <li>Sin problemas de altitud</li>
+                    <li>Peso máximo: 90kg</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h3>🎒 EQUIPO ESPECIALIZADO REQUERIDO</h3>
+        <div class="includes-grid">
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>👕 Vestimenta Técnica</h4>
+                <ul>
+                    <li>Ropa térmica de montaña</li>
+                    <li>Campera impermeable Gore-Tex</li>
+                    <li>Botas de equitación profesionales</li>
+                    <li>Casco de seguridad homologado</li>
+                    <li>Guantes técnicos</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>🧴 Equipo Personal</h4>
+                <ul>
+                    <li>Lentes de alta montaña</li>
+                    <li>Protector solar factor 50+</li>
+                    <li>Botiquín personal</li>
+                    <li>Medicamentos para altitud</li>
+                    <li>Cámara resistente al agua</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
