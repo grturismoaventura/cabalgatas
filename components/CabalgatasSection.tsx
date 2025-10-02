@@ -58,7 +58,7 @@ const cabalgatasData: CabalgataProps[] = [
     id: 'cabalgata-expertos',
     title: 'CABALGATA EXPERTOS',
     description: 'Una experiencia desafiante para jinetes experimentados en terreno montañoso.',
-    price: '$1.420.000',
+    price: '$1.520.000',
     duration: '7  DIAS 6 NOCHES',
     difficulty: 'Avanzado',
     image: 'expertosinicio.png',
