@@ -25,7 +25,7 @@
         }
         
         .title {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
+            background: linear-gradient(135deg, #342c2c, #342c2c);
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -56,21 +56,58 @@
         }
         
         .content-section {
-            margin: 25px 0;
-            padding: 15px;
-            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            background: #342c2c;
             border-radius: 8px;
-            border-left: 5px solid #0f8480;
+            border-left: 5px solid #342c2c;
             text-align: center;
+            line-height: 0.6;
         }
         
         .content-section h3 {
-            color: #0f8480;
+            color: white;
             margin-bottom: 15px;
         }
         
+        /* Estilos específicos para secciones de servicios y equipamiento */
+        .services-included,
+        .what-to-bring {
+            color: white;
+        }
+        
+        .services-included {
+            padding-bottom: 5px;
+        }
+        
+        .services-included h3 {
+            margin-bottom: 10px;
+        }
+        
+        .services-included ul {
+            margin-bottom: 0;
+        }
+        
+        .services-included p,
+        .what-to-bring p {
+            color: white;
+            line-height: 1.4;
+        }
+        
+        .services-included li,
+        .what-to-bring li {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left: 3px solid white;
+        }
+        
+        .services-included li:before,
+        .what-to-bring li:before {
+            color: white;
+        }
+        
         .price-highlight {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
+            background: linear-gradient(135deg, #342c2c, #342c2c);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -107,7 +144,7 @@
         }
         
         .itinerary-header {
-            background: #0f8480;
+            background: #342c2c;
             color: white;
             padding: 12px;
             text-align: center;
@@ -126,7 +163,7 @@
         }
         
         .day-title {
-            color: #0f8480;
+            color: #342c2c;
             font-size: 1.3em;
             font-weight: bold;
             margin-bottom: 8px;
@@ -144,11 +181,11 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #0f8480;
+            border-left: 4px solid #342c2c;
         }
         
         .include-item h4 {
-            color: #0f8480;
+            color: #342c2c;
             margin: 0 0 10px 0;
         }
         
@@ -170,15 +207,32 @@
             margin: 8px 0;
             padding: 12px 15px;
             border-radius: 5px;
-            border-left: 3px solid #0f8480;
+            border-left: 3px solid #342c2c;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         li:before {
             content: "✓";
-            color: #0f8480;
+            color: #342c2c;
             font-weight: bold;
             margin-right: 10px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .equipment-grid {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -218,28 +272,28 @@
     </div>
 
      <!-- Fechas de temporada -->
-    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #0f8480;">
-        <h3 style="color: #0f8480; margin: 0 0 15px 0; font-size: 1.4em;">FECHAS TEMPORADA 2025-2026</h3>
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #342c2c;">
+        <h3 style="color: #342c2c; margin: 0 0 15px 0; font-size: 1.4em;">FECHAS TEMPORADA 2025-2026</h3>
         
         <!-- Grid de fechas -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
-            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
-                <strong style="color: #0f8480;">Diciembre 2025</strong>
-                <p style="margin: 5px 0 0 0; color: #666;">6, 7 y 8<br>20 y 21</p>
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Diciembre 2025</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">6, 7 y 8<br>10, 20 y 21</p>
             </div>
             
-            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
-                <strong style="color: #0f8480;"> Enero 2026</strong>
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;"> Enero 2026</strong>
                 <p style="margin: 5px 0 0 0; color: #666;">16, 17 y 18</p>
             </div>
             
-            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
-                <strong style="color: #0f8480;">Febrero 2026</strong>
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Febrero 2026</strong>
                 <p style="margin: 5px 0 0 0; color: #666;">14, 15 y 16 (carnaval)<br>27, 28 y 1</p>
             </div>
             
-            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
-                <strong style="color: #0f8480;">Marzo 2026</strong>
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Marzo 2026</strong>
                 <p style="margin: 5px 0 0 0; color: #666;">7, 8 y 9 (día de la mujer)<br>21, 22 y 23</p>
             </div>
         </div>
@@ -253,8 +307,7 @@
         
         <div class="day-item">
             <div class="day-title">DÍA 1</div>
-            <p>Lugar de encuentro : Valle de Los Molles Malargue Mendoza . En el Montañés 
-Despues de las 10 de la mañana esperamos a los pasajeros que nos  acompañaran en esta aventura . Tendremos Charla y presentación de guías. Armado de alforjas.  
+            <p>En el Montañés, después de las 10 de la mañana esperamos a los pasajeros que nos acompañaran en esta aventura. Tendremos Charla y presentación de guías. Armado de alforjas.
 12:30 almuerzo en las instalaciones. Luego partiremos en  combi al lugar donde nos esperan los caballos. La Cabalgata tendrá una duración de 3 hs hasta llegar al campamento en Valle Hermoso. Apreciaremos la hermosa vista de este valle y su atardecer..
 En el campamento disfrutaremos de la Media tarde, sin olvidar nuestro amigo el Mate  al costado del fogón y charlas de por medio.
 
@@ -275,73 +328,215 @@ Pasamos nuestra  segunda noche de campo . </p>
         
         <div class="day-item">
             <div class="day-title">DÍA 3 </div>
-            <p>esayuno
+            <p>Desayuno
 Ultimo medio día de cabalgata . Cruzaremos el río tordillo para luego volver al mirador de Valle Hermoso. Allí  el Transfer nos espera con el almuerzo  y bebida fresca para culminar la cabalgata .
 Volvemos al montañés con la posibilidad de Ducharnos. Fin del servicio </p>
         </div>
     </div>
 
-    <div class="content-section">
-        <h3>✅ QUÉ INCLUYE EL TOUR</h3>
-        <div class="includes-grid">
-            <div class="include-item">
-                <h4>🐎 Equinos y Equipamiento</h4>
+    <div class="services-grid">
+        <!-- Servicios Incluidos a la izquierda -->
+        <div class="content-section" style="padding: 15px 15px 5px 15px;">
+            <div class="services-included">
+                <h3>SERVICIOS INCLUIDOS</h3>
                 <ul>
-                    <li>Caballos dóciles y entrenados</li>
-                    <li>Equipo de seguridad completo</li>
-                    <li>Monturas cómodas</li>
+                    <li>Caballo y montura</li>
+                    <li>Comidas y bebidas</li>
+                    <li>Guías y Baqueanos</li>
+                    <li>Comunicación satelital</li>
+                    <li>Equipo de seguridad y primeros auxilios</li>
+                    <li>2 noches de campamento</li>
+                    <li>3 dias de cabalgata</li>
                 </ul>
             </div>
-            <div class="include-item">
-                <h4>👨‍🦲 Guías y Servicios</h4>
-                <ul>
-                    <li>Guía experto bilingüe</li>
-                    <li>Baqueano local</li>
-                    <li>Primeros auxilios</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>🍽️ Alimentación</h4>
-                <ul>
-                    <li>Todas las comidas</li>
-                    <li>Bebidas durante el tour</li>
-                    <li>Snacks energéticos</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>🏠 Alojamiento y Transporte</h4>
-                <ul>
-                    <li>Refugios de montaña</li>
-                    <li>Transporte desde/hacia Mendoza</li>
-                    <li>Seguro de accidentes</li>
-                </ul>
+        </div>
+        
+        <!-- Equipo y Vestimenta a la derecha -->
+        <div class="content-section">
+            <div class="what-to-bring">
+                <h3>EQUIPO Y VESTIMENTA</h3>
+                
+                <div class="equipment-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <!-- Primera columna (primeros 10 elementos) -->
+                    <div>
+                        <p>-Elementos de higiene personal</p>
+                        <p>-Toallon y toalla</p>
+                        <p>- Sombrero con tiras sujetadoras</p>
+                        <p>- Protector solar y protector de labios</p>
+                        <p>- Buff o pañuelo de cuello</p>
+                        <p>- Anteojos de sol con protección Uv</p>
+                        <p>- Linterna minera</p>
+                        <p>- Cámara de fotos</p>
+                        <p>- Calza</p>
+                        <p>- Campera y polar</p>
+                    </div>
+                    
+                    <!-- Segunda columna (resto de elementos) -->
+                    <div>
+                        <p>- Medias largas</p>
+                        <p>- Pantalón liviano (bombacha de campo)</p>
+                        <p>- Camisa manga larga</p>
+                        <p>- Calzado liviano</p>
+                        <p>- Traje de baño</p>
+                        <p>- Medicacion personal</p>
+                        <p>- Repelente</p>
+                        <p>- Guantes livianos</p>
+                        <p>- Plato, cubiertos y tasa cantimploras</p>
+                        <p>- Bolsa de dormir</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="highlight">
-        <h3>🎒 QUÉ LLEVAR</h3>
-        <div class="includes-grid">
-            <div style="background: white; padding: 15px; border-radius: 8px;">
-                <h4>👕 Vestimenta</h4>
-                <ul>
-                    <li>Ropa cómoda para montar</li>
-                    <li>Campera impermeable</li>
-                    <li>Botas o zapatillas cerradas</li>
-                    <li>Sombrero o gorra</li>
-                </ul>
+    <div class="content-section">
+        <h3>CÓMO LLEGAR AL ESTABLECIMIENTO</h3>
+        
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">Vehículo Propio</h4>
+            <p style="line-height: 1.5;">Los pasajeros pueden llegar en sus propios vehículos al Montañés ubicado en Los Molles, Malargüe. Al momento de realizar la cabalgata el vehículo queda seguro en el predio del Club Andino Pehuenche.</p>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿Querés viajar en Colectivo o Avión?</h4>
+            <p><strong>¡Podés Hacerlo!</strong> Te sugerimos viajar un día antes a San Rafael Mendoza, dormir y al día siguiente tomar bondi desde la terminal hacia Las Leñas - Los Molles.</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p><strong>Empresa:</strong> Iselin</p>
+                <p><strong>Días de viaje:</strong> MARTES, JUEVES, SÁBADOS</p>
+                <p><strong>Horario de salida:</strong> 10:00 HS</p>
+                <p><strong>Horario de llegada a Los Molles:</strong> 12:35 HS</p>
             </div>
-            <div style="background: white; padding: 15px; border-radius: 8px;">
-                <h4>🧴 Elementos Personales</h4>
-                <ul>
-                    <li>Protector solar factor alto</li>
-                    <li>Anteojos de sol</li>
-                    <li>Cámara fotográfica</li>
-                    <li>Botella de agua personal</li>
-                    <li>Medicamentos personales</li>
-                </ul>
+            
+            <p>Podés contratarlo por ventanilla o comprar boleto con anticipación por alguna plataforma de internet (Ej: Central de Pasajes, Plataforma 10, etc.)</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                <p><strong>IMPORTANTE:</strong> Desde Mendoza Ciudad o Malargüe no hay servicios a la zona de Los Molles. En caso que quieras info de traslados particulares ¡consúltanos!</p>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿CÓMO VUELVO?</h4>
+            <p>Terminando el servicio el día 3 estará disponible para bajar a Malargüe el servicio de transporte. El valor del mismo se abonará en el lugar.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 San Rafael desde Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">18:00 Hs - Iselin</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">18:50 Hs - Cata</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">21:15 Hs - Buttini</p>
+                </div>
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 Mendoza desde Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">15:05 Hs - Cata</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="content-section">
+        <h3>MENÚ COMPLETO</h3>
+        
+                
+        <!-- Tres divs separados: Desayuno, Almuerzo y Cena -->
+        <div style="margin: 20px 0;">
+            <style>
+                @media (max-width: 768px) {
+                    .breakfast-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+            
+            <!-- Div 1: Desayunos y Meriendas -->
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c; margin-bottom: 20px;">
+                <h4 style="color: #342c2c; margin: 0 0 15px 0; text-align: center;">DESAYUNOS Y MERIENDAS</h4>
+                
+                <div class="breakfast-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <!-- Columna de comestibles -->
+                    <div>
+                        <h5 style="color: #342c2c; margin: 0 0 10px 0;">COMESTIBLES</h5>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Galletas</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Budín</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Fruta</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Frutos secos</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Huevos revueltos</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Pan casero</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Cereales</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna de bebidas -->
+                    <div>
+                        <h5 style="color: #342c2c; margin: 0 0 10px 0;">BEBIDAS</h5>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Mate</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Café</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Té/Mate cocido</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Jugo de Naranja</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Leche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 2 y 3: Almuerzos a la izquierda y Cenas a la derecha -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <style>
+                    @media (max-width: 768px) {
+                        .lunch-dinner-row {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+                
+                <!-- Div 2: Almuerzos -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;">ALMUERZOS</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Día 1</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Empanadas de verdura, J y Q, carne</p>
+                    </div>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Día 2</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Sandwich de Milanesa</p>
+                    </div>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Día 3</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Sandwich de Jamón Crudo</p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 8px; background: #e8f5e8; border-radius: 5px; border-left: 3px solid #28a745;">
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4;"><strong>✅ Incluye gaseosa</strong></p>
+                    </div>
+                </div>
+
+                <!-- Div 3: Cenas -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;"> CENAS</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Noche 1</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Chivito al horno de barro con papas</p>
+                    </div>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Noche 2</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Asado de novillo a las brazas con verduras asadas</p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 8px; background: #e8f5e8; border-radius: 5px; border-left: 3px solid #28a745;">
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4;"><strong>✅ Las cenas incluyen ensaladas</strong></p>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9em; line-height: 1.4;"><strong>✅ Gaseosa / Vino</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
