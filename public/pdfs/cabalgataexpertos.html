@@ -25,7 +25,7 @@
         }
         
         .title {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
+            background: linear-gradient(135deg, #342c2c);
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -58,19 +58,56 @@
         .content-section {
             margin: 25px 0;
             padding: 15px;
-            background: #f9f9f9;
+            background: #342c2c;
             border-radius: 8px;
-            border-left: 5px solid #0f8480;
+            border-left: 5px solid #342c2c;
             text-align: center;
+            line-height: 0.6;
         }
         
         .content-section h3 {
-            color: #0f8480;
+            color: white;
             margin-bottom: 15px;
         }
         
+        /* Estilos específicos para secciones de servicios y equipamiento */
+        .services-included,
+        .what-to-bring {
+            color: white;
+        }
+        
+        .services-included {
+            padding-bottom: 5px;
+        }
+        
+        .services-included h3 {
+            margin-bottom: 10px;
+        }
+        
+        .services-included ul {
+            margin-bottom: 0;
+        }
+        
+        .services-included p,
+        .what-to-bring p {
+            color: white;
+            line-height: 1.4;
+        }
+        
+        .services-included li,
+        .what-to-bring li {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left: 3px solid white;
+        }
+        
+        .services-included li:before,
+        .what-to-bring li:before {
+            color: white;
+        }
+        
         .price-highlight {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
+            background: linear-gradient(135deg, #342c2c);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -80,30 +117,21 @@
         }
         
         .price-highlight h3 {
-            margin: 0 0 12px 0;
+            margin: 0 0 15px 0;
             font-size: 1.8em;
         }
         
         .price-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin-top: 12px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .price-item {
             background: rgba(255,255,255,0.2);
-            padding: 8px;
+            padding: 10px;
             border-radius: 5px;
-            text-align: center;
-        }
-        
-        .warning-box {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
             text-align: center;
         }
         
@@ -112,20 +140,21 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 25px 0;
+            margin: 20px 0;
         }
         
         .itinerary-header {
-            background: #0f8480;
+            background: #342c2c;
             color: white;
-            padding: 15px;
+            padding: 12px;
             text-align: center;
         }
         
         .day-item {
-            padding: 20px;
+            padding: 15px;
             border-bottom: 1px solid #eee;
             background: linear-gradient(135deg, #f8f9fa, #fff);
+            margin-bottom: 20px;
             text-align: center;
         }
         
@@ -134,17 +163,17 @@
         }
         
         .day-title {
-            color: #0f8480;
+            color: #342c2c;
             font-size: 1.3em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .includes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+            gap: 15px;
+            margin: 15px 0;
         }
         
         .include-item {
@@ -152,11 +181,11 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #0f8480;
+            border-left: 4px solid #342c2c;
         }
         
         .include-item h4 {
-            color: #0f8480;
+            color: #342c2c;
             margin: 0 0 10px 0;
         }
         
@@ -164,7 +193,7 @@
             background: #fff3cd;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #342c2c;
             margin: 20px 0;
         }
         
@@ -178,15 +207,32 @@
             margin: 8px 0;
             padding: 12px 15px;
             border-radius: 5px;
-            border-left: 3px solid #0f8480;
+            border-left: 3px solid #342c2c;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         li:before {
             content: "✓";
-            color: #0f8480;
+            color: #342c2c;
             font-weight: bold;
             margin-right: 10px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .equipment-grid {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -195,169 +241,355 @@
         <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
         <div class="title">
             <h1>CABALGATA EXPERTOS</h1>
-            <h2>Una experiencia desafiante para jinetes experimentados</h2>
+            <h2>Travesía de 5 días para jinetes con experiencia</h2>
         </div>
     </div>
 
     <img src="/expertosinicio.png" alt="Cabalgata Expertos" class="main-image">
 
-    <div class="warning-box">
-        <h3>⚠️ ATENCIÓN - SOLO PARA EXPERTOS</h3>
-        <p>Esta cabalgata requiere experiencia previa en equitación y excelente condición física. No apta para principiantes.</p>
-    </div>
+    <!-- Fechas de temporada -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #342c2c;">
+        <h3 style="color: #342c2c; margin: 0 0 15px 0; font-size: 1.4em;">FECHAS DISPONIBLES</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Diciembre 2025</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">11 al 17 de Diciembre</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Febrero 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">13 al 19 de Febrero</p>
+            </div>
+        </div>
 
-    <div class="content-section">
-        <h3>🏔️ Descripción de la Experiencia</h3>
-        <p>Una experiencia desafiante para jinetes experimentados en terreno montañoso de alta dificultad. Durante 7 días recorreremos senderos de alta montaña, cruzaremos ríos, navegaremos terrenos rocosos y alcanzaremos altitudes de hasta 3,500 metros sobre el nivel del mar.</p>
-        <p>Esta expedición está diseñada para aquellos que buscan llevar sus habilidades ecuestres al límite en algunos de los paisajes más espectaculares y desafiantes de los Andes argentinos.</p>
+        <p style="margin: 15px 0 0 0; font-style: italic; color: #666; font-size: 0.9em;">
+            <strong>Punto de Encuentro:</strong> Complejo GR Montañés - Los Molles</p>
     </div>
-
     <div class="price-highlight">
-        <h3>💰 INFORMACIÓN DEL TOUR</h3>
+        <h3>INFORMACIÓN DEL TOUR</h3>
         <div class="price-grid">
             <div class="price-item">
-                <strong>PRECIO</strong><br>
-                $1.420.000 CLP<br>
-                <small>por persona</small>
-            </div>
-            <div class="price-item">
                 <strong>DURACIÓN</strong><br>
-                7 DÍAS<br>
+                5 DÍAS<br>
                 <small>6 noches</small>
             </div>
             <div class="price-item">
-                <strong>DIFICULTAD</strong><br>
-                AVANZADO<br>
-                <small>Solo expertos</small>
+                <strong>NIVEL</strong><br>
+                EXPERTOS<br>
+                <small>Experiencia requerida</small>
             </div>
             <div class="price-item">
-                <strong>ALTITUD</strong><br>
-                HASTA 3,500m<br>
-                <small>sobre el nivel del mar</small>
+                <strong>CUPOS</strong><br>
+                LIMITADOS<br>
+                <small>Reservar con anticipación</small>
             </div>
         </div>
     </div>
 
+    <!-- Requisitos -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #342c2c; border-radius: 8px; border: 2px solid #342c2c;">
+        <h3 style="color: white; margin: 0 0 15px 0; font-size: 1.4em;">REQUISITOS OBLIGATORIOS</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Experiencia</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Ensillar y desensillar<br>Experiencia en montar a caballo</p>
+            </div>
+
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Edad</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Mayor de 18 años<br>Hasta 50 años</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Documentación</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Ficha médica firmada<br>y sellada por médico</p>
+            </div>
+        </div>
+    </div>
+
+     
+
     <div class="itinerary">
         <div class="itinerary-header">
-            <h3>📅 ITINERARIO EXTREMO - 7 DÍAS</h3>
+            <h3>ITINERARIO DETALLADO</h3>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍAS 1-2 - Aclimatación y Ascenso Inicial</div>
-            <p><strong>Día 1:</strong> Salida temprana desde Mendoza hacia el punto base (2,000m). Encuentro con caballos especialmente entrenados para alta montaña. Primeras 4 horas de cabalgata de aclimatación.</p>
-            <p><strong>Día 2:</strong> Ascenso gradual hasta los 2,500m. Técnicas de manejo en terreno rocoso. Campamento base en refugio de alta montaña. Preparación de equipos especializados.</p>
+            <div class="day-title">DÍA 1</div>
+            <p>Recepción a partir de las 15 hs en el complejo GR Montañés. 19:30 HS charla a cargo de Guías y armado de alforjas. 21:30 cena. Entrega de habitaciones cabañas GR.</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍAS 3-4 - Travesía por Senderos de Montaña</div>
-            <p><strong>Día 3:</strong> Travesía por el Sendero del Cóndor (3,000m). Cruce de ríos de montaña. Navegación por terreno de glaciares. Técnicas avanzadas de equitación en hielo.</p>
-            <p><strong>Día 4:</strong> Ascenso al Paso de los Vientos (3,200m). Cabalgata por filo de montaña. Vista panorámica del Aconcagua. Campamento en refugio de emergencia.</p>
+            <div class="day-title">DÍA 2</div>
+            <p>Desayuno a partir de las 7:30. 9:30 hs partimos hacia Portezuelo Ancho en camioneta (2800msnm) donde nos esperan los caballos. 3 hs de travesía hasta campamento Las Yeseras, almuerzo. Por la tarde opcional: descanso en Laguna del corazón o cabalgata hasta mirador de los 3 valles (3 horas de cabalgata). Cena y Fogón criollo.</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍAS 5-6 - Exploración de Valles Remotos</div>
-            <p><strong>Día 5:</strong> Descenso técnico al Valle Perdido. Exploración de formaciones geológicas únicas. Práctica de técnicas de supervivencia en montaña.</p>
-            <p><strong>Día 6:</strong> Ascenso final al punto más alto del tour (3,500m). Técnicas avanzadas de manejo del caballo en altitud. Ceremonia de graduación para expertos.</p>
+            <div class="day-title">DÍA 3</div>
+            <p>Luego del desayuno prepararemos nuestros equipos para partir hacia "Arroyo Trujillo", cruzaremos el cerro áspero (3300msnm). Almuerzo frío, podrán ducharse en el arroyo. 3 hs de cabalgata, descansamos por la tarde, el siguiente día es el más largo. Cena y fogón.</p>
         </div>
         
         <div class="day-item">
-            <div class="day-title">DÍA 7 - Descenso y Retorno</div>
-            <p><strong>Mañana:</strong> Descenso gradual y seguro por senderos alternativos. Evaluación de la experiencia y técnicas aprendidas.</p>
-            <p><strong>Tarde:</strong> Almuerzo de celebración en el refugio base. Retorno a Mendoza con paradas en miradores especiales.</p>
+            <div class="day-title">DÍA 4</div>
+            <p>Desayunamos y partimos hacia el valle de Santa Elena, donde llegaremos a la frontera con Chile (3250msnm). 3 horas de cabalgata. Almuerzo vianda fría. Por la tarde partimos hacia Laguna de Las Cargas, un paraíso en el medio de Los Andes Mendocinos. 4hs de cabalgata.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍA 5</div>
+            <p>Desayuno y descanso por la mañana en el Valle de Las Cargas. Almuerzo. Por la tarde emprendemos el regreso a valle hermoso, 4 hs de travesía. Cena y fogón.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DÍA 6</div>
+            <p>Desayuno y terminamos la travesía en el mirador de valle hermoso, cabalgata de 3 hs, almuerzo y fin de la cabalgata. Última noche en el complejo montañés, cena.</p>
+        </div>
+    </div>
+
+    <div class="services-grid">
+        <!-- Servicios Incluidos a la izquierda -->
+        <div class="content-section" style="padding: 15px 15px 5px 15px;">
+            <div class="services-included">
+                <h3>QUÉ INCLUYE</h3>
+                <ul>
+                    <li>Caballo y montura</li>
+                    <li>Logística con camionetas y mulas</li>
+                    <li>Comidas y bebidas</li>
+                    <li>Guías y Baqueanos</li>
+                    <li>Comunicación satelital</li>
+                    <li>Equipo de seguridad y primeros auxilios</li>
+                    <li>5 días de cabalgata, 6 noches</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Equipo y Vestimenta a la derecha -->
+        <div class="content-section">
+            <div class="what-to-bring">
+                <h3> EQUIPO Y VESTIMENTA</h3>
+                
+                <div class="equipment-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <!-- Primera columna -->
+                    <div>
+                        <p>-Elementos de higiene personal</p>
+                        <p>-Toallón y toalla</p>
+                        <p>- Sombrero con tiras sujetadoras</p>
+                        <p>- Protector solar y protector de labios</p>
+                        <p>- Buff o pañuelo de cuello</p>
+                        <p>- <strong>IMPORTANTE</strong> Anteojos de sol con protección UV</p>
+                        <p>- Linterna minera</p>
+                        <p>- Campera y polar</p>
+                        <p>- Calza</p>
+                        <p>- Medias largas</p>
+                    </div>
+                    
+                    <!-- Segunda columna -->
+                    <div>
+                        <p>-Pantalón liviano 2 mudas (bombacha de campo)</p>
+                        <p>- Camisa manga larga</p>
+                        <p>- Calzado liviano</p>
+                        <p>-Traje de baño</p>
+                        <p>-Medicación personal</p>
+                        <p>- Repelente</p>
+                        <p>-Guantes livianos</p>
+                        <p>-Plato, cubiertos y taza</p>
+                        <p>-Cantimploras</p>
+                        <p>Bolsa de dormir -10°C</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="content-section">
-        <h3>✅ QUÉ INCLUYE EL TOUR EXTREMO</h3>
-        <div class="includes-grid">
-            <div class="include-item">
-                <h4>🐎 Equinos Especializados</h4>
-                <ul>
-                    <li>Caballos entrenados para alta montaña</li>
-                    <li>Equipo de seguridad extrema</li>
-                    <li>Monturas especiales para terreno difícil</li>
-                    <li>Equipos de emergencia</li>
-                </ul>
+        <h3>CÓMO LLEGAR AL ESTABLECIMIENTO</h3>
+        
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">Vehículo Propio</h4>
+            <p style="line-height: 1.5;">Los pasajeros pueden llegar en sus propios vehículos al Montañés ubicado en Los Molles, Malargüe. Al momento de realizar la cabalgata el vehículo queda seguro en el predio del Club Andino Pehuenche.</p>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿Querés viajar en Colectivo o Avión?</h4>
+            <p><strong>¡Podés Hacerlo!</strong> Te sugerimos viajar un día antes a San Rafael Mendoza, dormir y al día siguiente tomar bondi desde la terminal hacia Las Leñas - Los Molles.</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p><strong>Empresa:</strong> Iselin</p>
+                <p><strong>Días de viaje:</strong> MARTES, JUEVES, SÁBADOS</p>
+                <p><strong>Horario de salida:</strong> 10:00 HS</p>
+                <p><strong>Horario de llegada a Los Molles:</strong> 12:35 HS</p>
             </div>
-            <div class="include-item">
-                <h4>👨‍🦲 Equipo Experto</h4>
-                <ul>
-                    <li>Guía certificado en alta montaña</li>
-                    <li>Baqueano experto local</li>
-                    <li>Paramédico especializado</li>
-                    <li>Comunicación satelital</li>
-                </ul>
+            
+            <p>Podés contratarlo por ventanilla o comprar boleto con anticipación por alguna plataforma de internet (Ej: Central de Pasajes, Plataforma 10, etc.)</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                <p><strong>IMPORTANTE:</strong> Desde Mendoza Ciudad o Malargüe no hay servicios a la zona de Los Molles. En caso que quieras info de traslados particulares ¡consúltanos!</p>
             </div>
-            <div class="include-item">
-                <h4>🍽️ Alimentación Especializada</h4>
-                <ul>
-                    <li>Comidas de alta energía</li>
-                    <li>Suplementos nutricionales</li>
-                    <li>Bebidas isotónicas</li>
-                    <li>Raciones de emergencia</li>
-                </ul>
-            </div>
-            <div class="include-item">
-                <h4>🏠 Alojamiento Extremo</h4>
-                <ul>
-                    <li>Refugios de alta montaña</li>
-                    <li>Equipos de camping especializado</li>
-                    <li>Transporte 4x4 especializado</li>
-                    <li>Seguro de alta montaña</li>
-                </ul>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿CÓMO VUELVO?</h4>
+            <p>Terminando el servicio el día 6 estará disponible para bajar a Malargüe el servicio de transporte. El valor del mismo se abonará en el lugar.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 San Rafael desde Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">18:00 Hs - Iselin</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">18:50 Hs - Cata</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">21:15 Hs - Buttini</p>
+                </div>
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 Mendoza desde Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">15:05 Hs - Cata</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="warning-box">
-        <h3>📋 REQUISITOS OBLIGATORIOS</h3>
-        <div class="includes-grid" style="margin-top: 20px;">
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>🏇 Experiencia Requerida</h4>
-                <ul style="color: #333;">
-                    <li>Mínimo 5 años de experiencia en equitación</li>
-                    <li>Experiencia previa en cabalgatas de montaña</li>
-                    <li>Certificado médico de aptitud física</li>
-                    <li>No apto para menores de 18 años</li>
-                </ul>
+    <div class="content-section">
+        <h3>MENÚ COMPLETO</h3>
+        
+        <!-- Tres divs separados: Desayuno, Almuerzo y Cena -->
+        <div style="margin: 20px 0;">
+            <style>
+                @media (max-width: 768px) {
+                    .breakfast-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+            
+            <!-- Div 1: Desayunos y Meriendas -->
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c; margin-bottom: 20px;">
+                <h4 style="color: #342c2c; margin: 0 0 15px 0; text-align: center;">DESAYUNOS Y MERIENDAS</h4>
+                
+                <div class="breakfast-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <!-- Columna de comestibles -->
+                    <div>
+                        <h5 style="color: #342c2c; margin: 0 0 10px 0;">COMESTIBLES</h5>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Galletas</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Budín</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Fruta</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Frutos secos</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Pan casero</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna de bebidas -->
+                    <div>
+                        <h5 style="color: #342c2c; margin: 0 0 10px 0;">BEBIDAS</h5>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Mate</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Café</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Té/Mate cocido</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Leche</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
-                <h4>💪 Condición Física</h4>
-                <ul style="color: #333;">
-                    <li>Excelente estado físico</li>
-                    <li>Resistencia cardiovascular alta</li>
-                    <li>Sin problemas de altitud</li>
-                    <li>Peso máximo: 90kg</li>
-                </ul>
+
+            <!-- Div 2 y 3: Almuerzos a la izquierda y Cenas a la derecha -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <style>
+                    @media (max-width: 768px) {
+                        .lunch-dinner-row {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+                
+                <!-- Div 2: Almuerzos -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;">ALMUERZOS</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Viandas frías</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Para todos los medio días</p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 8px; background: #e8f5e8; border-radius: 5px; border-left: 3px solid #28a745;">
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4;"><strong>✅ Consultar por menú:</strong></p>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9em; line-height: 1.4;">Vegetariano/Vegano/Sin TACC</p>
+                    </div>
+                </div>
+
+                <!-- Div 3: Cenas -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;">CENAS</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Comidas elaboradas</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Preparadas por nuestros guías</p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 8px; background: #e8f5e8; border-radius: 5px; border-left: 3px solid #28a745;">
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4;"><strong>✅ Consultar por menú:</strong></p>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9em; line-height: 1.4;">Vegetariano/Vegano/Sin TACC</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="highlight">
-        <h3>🎒 EQUIPO ESPECIALIZADO REQUERIDO</h3>
-        <div class="includes-grid">
-            <div style="background: white; padding: 15px; border-radius: 8px;">
-                <h4>👕 Vestimenta Técnica</h4>
-                <ul>
-                    <li>Ropa térmica de montaña</li>
-                    <li>Campera impermeable Gore-Tex</li>
-                    <li>Botas de equitación profesionales</li>
-                    <li>Casco de seguridad homologado</li>
-                    <li>Guantes técnicos</li>
-                </ul>
+    <div class="content-section">
+        <h3>💳 INFORMACIÓN DE RESERVA Y PAGO</h3>
+        
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿CÓMO RESERVO MI LUGAR?</h4>
+            <p style="line-height: 1.5;">Con una seña del 10% en forma de transferencia o depósito bancario.</p>
+            <p style="line-height: 1.5;"><strong>Con el 10% del valor total congelas la tarifa.</strong></p>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">¿EL SALDO RESTANTE CÓMO LO PAGO?</h4>
+            <p style="line-height: 1.5;">El valor únicamente se congela pagando de la siguiente forma:</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p><strong>• Efectivo o dólar billete</strong> al momento de viajar</p>
+                <p><strong>• Seña 10% + 3 Cuotas mensuales</strong> por transferencia</p>
+                <p><strong>• Otras formas de pago:</strong> Crédito con intereses (Link de Pago Mercado Pago)</p>
             </div>
-            <div style="background: white; padding: 15px; border-radius: 8px;">
-                <h4>🧴 Equipo Personal</h4>
-                <ul>
-                    <li>Lentes de alta montaña</li>
-                    <li>Protector solar factor 50+</li>
-                    <li>Botiquín personal</li>
-                    <li>Medicamentos para altitud</li>
-                    <li>Cámara resistente al agua</li>
-                </ul>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                <p style="line-height: 1.5;"><strong>IMPORTANTE:</strong> La seña no es reembolsable en caso de que el pasajero no pueda viajar, pero sí puede optar por cambiar de fecha/año o transferirla a otro pasajero. Teniendo en cuenta que nuestra moneda se desvaloriza constantemente tienen garantizado el 10% del precio actualizado.</p>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">📞 INFORMACIÓN NECESARIA</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📋 Datos Personales:</h5>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Nombre Completo</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• DNI</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Fecha de nacimiento</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Edad</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Ciudad</p>
+                </div>
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📞 Contacto:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Teléfono:</strong> 3834214287</p>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Email:</strong> grturismoaventura@gmail.com</p>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Régimen Alimenticio:</strong> Normal/Celíaco/Vegetariano/Vegano</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">🏦 DATOS BANCARIOS</h4>
+            <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>TITULAR:</strong> VLM TURISMO SAS</p>
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>NRO CTA:</strong> 04069670-003</p>
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>CBU:</strong> 0270080910040696700030</p>
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>CUIL:</strong> 30716184508</p>
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>BANCO:</strong> Supervielle Sucursal Malargüe</p>
+                <p style="margin: 5px 0; line-height: 1.5;"><strong>TIPO:</strong> Cuenta Corriente en Pesos</p>
             </div>
         </div>
     </div>
+    
 </body>
 </html>
+            
