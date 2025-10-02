@@ -10,6 +10,7 @@ interface CabalgataProps {
   difficulty: 'Principiante' | 'Intermedio' | 'Avanzado'; 
   image: string;
   pdfUrl: string;
+  available?: boolean; // Nueva propiedad para controlar disponibilidad
 }
 
 // EDITABLE: Datos principales de las cabalgatas
@@ -23,6 +24,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
     pdfUrl: '/pdfs/cruce-de-los-andes.html',
+    available: true,
   },
   {
     id: 'cabalgata-avion-uruguayos',
@@ -33,6 +35,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Intermedio',
     image: 'avion.png',
     pdfUrl: '/pdfs/cabalgata-avion-uruguayos.html',
+    available: true,
   },
   {
     id: 'cabalgata-los-molles',
@@ -43,6 +46,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Principiante',
     image: 'cabalgataLosMolles.png',
     pdfUrl: '/pdfs/cabalgataLosMolles.html',
+    available: true,
   },
   {
     id: 'cabalgata-3-valles',
@@ -53,6 +57,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Principiante',
     image: 'cabalgata3valles.png',
     pdfUrl: '/pdfs/cabalgata3valles.html',
+    available: true,
   },
   {
     id: 'cabalgata-expertos',
@@ -63,6 +68,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Avanzado',
     image: 'expertosinicio.png',
     pdfUrl: '/pdfs/cabalgataexpertos.html',
+    available: true,
   },
   {
     id: 'Semana Santa',
@@ -73,6 +79,7 @@ const cabalgatasData: CabalgataProps[] = [
     difficulty: 'Intermedio',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
+    available: false, // Marcada como no disponible
   },
 ];
 
@@ -102,18 +109,35 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
         {/* Sección de precio y botón */}
         <div className={styles.actionSection}>
           <div className={styles.priceDisplay}>
-            <span className={styles.priceLabel}>Precio:</span>
+            {cabalgata.available !== false && (
+              <span className={styles.priceLabel}>Precio:</span>
+            )}
             <span className={styles.currentPrice}>{cabalgata.price}</span>
           </div>
-          {cabalgata.pdfUrl && (
-            <a 
-              href={cabalgata.pdfUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.moreInfoButton}
+          {cabalgata.available !== false ? (
+            cabalgata.pdfUrl && (
+              <a 
+                href={cabalgata.pdfUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.moreInfoButton}
+              >
+                Más Información
+              </a>
+            )
+          ) : (
+            <button 
+              className={`${styles.moreInfoButton} ${styles.disabledButton}`}
+              disabled
+              style={{ 
+                opacity: 0.5, 
+                cursor: 'not-allowed',
+                backgroundColor: '#ccc',
+                color: '#666'
+              }}
             >
-              Más Información
-            </a>
+              No Disponible
+            </button>
           )}
         </div>
       </div>
