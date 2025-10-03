@@ -20,7 +20,7 @@ export default function Header() {
             {/* Logo */}
             <div className={styles.logo}>
               <img 
-                src="/logoGr.png" 
+                src="/logo-gr.png" 
                 alt="GR Turismo"
                 style={{ 
                   width: '120px',

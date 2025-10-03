@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react';
 
 const imagesToTest = [
-  { name: 'Logo GR', path: '/logoGr.png' },
+  { name: 'Logo GR (original)', path: '/logoGr.png' },
+  { name: 'Logo GR (optimizado PNG)', path: '/logo-gr.png' },
+  { name: 'Logo GR (optimizado JPG)', path: '/logo-gr.jpg' },
   { name: 'Fondo Inicio', path: '/fondoinicio.png' },
   { name: 'Cruce Andes', path: '/cruceDeLosAndesInicio.png' },
   { name: 'Avión', path: '/avion.png' },
