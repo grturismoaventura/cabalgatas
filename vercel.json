@@ -1,8 +1,1 @@
-{
-  "build": {
-    "env": {
-      "ENABLE_GIT_LFS": "1"
-    }
-  },
-  "buildCommand": "git lfs pull && npm run build"
-}
+{}
