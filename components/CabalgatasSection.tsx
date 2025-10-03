@@ -76,7 +76,7 @@ const cabalgatasData: CabalgataProps[] = [
     description: 'Expedición especial de Semana Santa con actividades culturales y paisajes únicos',
     price: 'PROXIMAMENTE',
     duration: '4 DIAS 3 NOCHES',
-    difficulty: 'Intermedio',
+    difficulty: 'Principiante',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
     available: false, // Marcada como no disponible
