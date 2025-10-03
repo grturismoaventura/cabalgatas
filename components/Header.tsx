@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
 import styles from '@/styles/Header.module.css';
 
 export default function Header() {
@@ -19,7 +20,13 @@ export default function Header() {
           <div className={styles.navContent}>
             {/* Logo */}
             <div className={styles.logo}>
-              <img src="/logoGr.png" alt="GR Turismo" />
+              <Image 
+                src="/logoGr.png" 
+                alt="GR Turismo"
+                width={120}
+                height={60}
+                style={{ objectFit: 'contain' }}
+              />
             </div>
 
             {/* Desktop Navigation */}
