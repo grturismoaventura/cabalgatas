@@ -25,7 +25,8 @@ export default function Header() {
             {/* Desktop Navigation */}
             <ul className={styles.navLinks}>
               <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#cabalgatas">Cabalgatas</a></li> {/* EDITABLE: Enlaces de navegación */}
+              <li><a href="#cabalgatas">Cabalgatas</a></li>
+              <li><a href="#transfer">Transfer</a></li>
               
             </ul>
 
@@ -45,6 +46,7 @@ export default function Header() {
               <ul className={styles.mobileNavLinks}>
                 <li><a href="#inicio" onClick={toggleMenu}>Inicio</a></li>
                 <li><a href="#cabalgatas" onClick={toggleMenu}>Cabalgatas</a></li>
+                <li><a href="#transfer" onClick={toggleMenu}>Transfer</a></li>
                 
               </ul>
             </div>
