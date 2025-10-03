@@ -87,17 +87,12 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
   return (
     <div className={styles.cabalgataCard}>
       <div className={styles.cardImage}>
-        <img 
-          src={cabalgata.image} 
-          alt={cabalgata.title}
-          style={{ 
-            width: '100%',
-            height: '300px',
-            objectFit: 'cover'
-          }}
-        />
-        
-        {/* Badge de dificultad */}
+              <div className={styles.cardImage}>
+                <img 
+                  src={cabalgata.image} 
+                  alt={cabalgata.title}
+                />
+              </div>        {/* Badge de dificultad */}
         <div className={styles.difficultyBadge}>
           {cabalgata.difficulty}
         </div>
