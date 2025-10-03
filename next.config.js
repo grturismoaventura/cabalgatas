@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { 
-    unoptimized: false,
+    unoptimized: true,
     domains: ['images.pexels.com', 'images.unsplash.com'],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
