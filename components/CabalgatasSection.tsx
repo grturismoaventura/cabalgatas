@@ -1,5 +1,4 @@
 import { Clock, DollarSign } from 'lucide-react';
-import Image from 'next/image';
 import styles from '@/styles/CabalgatasSection.module.css';
 
 interface CabalgataProps {
@@ -88,12 +87,14 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
   return (
     <div className={styles.cabalgataCard}>
       <div className={styles.cardImage}>
-        <Image 
+        <img 
           src={cabalgata.image} 
           alt={cabalgata.title}
-          width={400}
-          height={300}
-          style={{ objectFit: 'cover' }}
+          style={{ 
+            width: '100%',
+            height: '300px',
+            objectFit: 'cover'
+          }}
         />
         
         {/* Badge de dificultad */}

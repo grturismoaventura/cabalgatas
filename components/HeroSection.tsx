@@ -1,19 +1,19 @@
 import { ArrowDown, Play, Star } from 'lucide-react';
-import Image from 'next/image';
 import styles from '@/styles/HeroSection.module.css';
 
 export default function HeroSection() {
   return (
     <section id="inicio" className={styles.hero}>
       {/* EDITABLE: Video de fondo o imagen - Cambiar URL por el contenido deseado */}
-      <div className={styles.heroBackground}>
-        <Image 
-          src="/fondoinicio.png"
-          alt="Fondo de inicio - Cabalgatas GR Turismo"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
+      <div 
+        className={styles.heroBackground}
+        style={{
+          backgroundImage: 'url(/fondoinicio.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className={styles.heroOverlay}>
           <div className={styles.container}>
             <div className={styles.heroContent}>

@@ -1,7 +1,6 @@
 'use client';
 
 import { Car, MapPin, Clock, Users } from 'lucide-react';
-import Image from 'next/image';
 import styles from '@/styles/TransferSection.module.css';
 
 export default function TransferSection() {
@@ -17,13 +16,15 @@ export default function TransferSection() {
 
         <div className={styles.mainContent}>
           <div className={styles.imageContainer}>
-            <Image 
+            <img 
               src="/transfer.jpeg" 
               alt="Servicio de Transfer" 
-              width={600}
-              height={400}
               className={styles.transferImage}
-              style={{ objectFit: 'cover' }}
+              style={{ 
+                width: '100%',
+                height: '400px',
+                objectFit: 'cover'
+              }}
             />
           </div>
           
