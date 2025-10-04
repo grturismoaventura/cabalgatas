@@ -89,7 +89,16 @@ const cabalgatasData: CabalgataProps[] = [
 ];
 
 function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // Función para generar la URL correcta según el idioma
+  const getLocalizedPdfUrl = (pdfUrl: string, language: string) => {
+    if (language === 'es') {
+      return pdfUrl; // URL original para español
+    }
+    // Para otros idiomas, insertar el código de idioma en la ruta
+    return pdfUrl.replace('/pdfs/', `/pdfs/${language}/`);
+  };
   
   return (
     <div className={styles.cabalgataCard}>
@@ -126,7 +135,7 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
           {cabalgata.available !== false ? (
             cabalgata.pdfUrl && (
               <a 
-                href={cabalgata.pdfUrl} 
+                href={getLocalizedPdfUrl(cabalgata.pdfUrl, i18n.language)} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.moreInfoButton}

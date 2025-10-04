@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Los Molles Horse Ride - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Agrandir';
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-section {
+            position: relative;
+            height: 350px;
+            border-radius: 15px;
+            margin: 15px 0;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 85%;
+            border-radius: 15px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+        
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 15px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #16a085;
+        }
+        
+                .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .services-included, .services-not-included {
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .services-included {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+        }
+        
+        .services-not-included {
+            background: linear-gradient(135deg,#0f8480, #20a39e);
+            color: white;
+        }
+        
+        .services-included h3, .services-not-included h3 {
+            margin: 0 0 20px 0;
+            font-size: 1.4em;
+            text-align: center;
+        }
+        
+        .services-included ul, .services-not-included ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .services-included li, .services-not-included li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            background: transparent !important;
+            border-left: none !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+        }
+        
+        .services-included li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .services-not-included li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .what-to-bring {
+            background: #f8f9fa;
+            color: black;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .payment-info {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .day-section {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 5px solid #0f8480;
+            text-align: center;
+        }
+        
+        .days-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .day-section h3 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        
+        .photo-section {
+            margin: 30px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .photo-section img {
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center 80%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container, .days-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 25px 0;
+        }
+        
+                .itinerary-header {
+            background: #0f8480;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0 10px 0;
+        }
+        
+        .day-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+                .day-title {
+            background: #20a39e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f8480;
+        }
+        
+        .include-item h4 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .day-section li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #16a085;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .day-section li:before {
+            content: "✓";
+            color: #16a085;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        /* Ajustes adicionales para interlineado más compacto */
+        p {
+            margin: 8px 0;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            line-height: 1.2;
+            margin: 10px 0 8px 0;
+        }
+        
+        h4 {
+            line-height: 1.2;
+            margin: 8px 0 6px 0;
+        }
+        
+        .content-section p {
+            margin: 6px 0;
+        }
+        
+        .content-section h3 {
+            margin: 8px 0 6px 0;
+        }
+        
+        .content-section h4 {
+            margin: 6px 0 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>LOS MOLLES HORSE RIDE</h1>
+            <h2>2 DAYS 1 NIGHT</h2>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <img src="/cabalgatalosmolles2.jpg" alt="Los Molles Horse Ride" />
+        <div class="hero-overlay">
+           
+        </div>
+    </div>
+
+    <!-- Fechas de temporada -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #0f8480;">
+        <h3 style="color: #0f8480; margin: 0 0 15px 0; font-size: 1.4em;">SEASON DATES 2026</h3>
+        
+        <!-- Grid de fechas -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">January 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">4-5<br>6-7<br>11-12<br>13-14<br>18-19<br>20-21<br>25-26<br>27-28</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">February 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">1-2<br>3-4<br>8-9<br>10-11<br>15-16<br>17-18<br>22-23<br>24-25</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">March 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">1-2<br>8-9</p>
+            </div>
+        </div>
+
+        <p style="margin: 15px 0 0 0; font-style: italic; color: #666; font-size: 0.9em;">
+            <strong>Meeting Point:</strong> El Montañés - Los Molles</p>
+        </p>
+    </div>
+
+    <div class="days-container">
+        <div class="day-section">
+            <h3>DAY 1</h3>
+            <p>We will welcome you at the "El Montañes" restaurant, located in Los Molles, RP 222, Malargüe. From 11 am. Informative and safety talk with the guide. 
+We will have lunch with good creole empanadas and then we will go to meet and get to know the horses to start the tour. 
+We will leave heading to the old slopes of Los Molles, cross the Pedrero stream and pass through the lagoon area. 
+We will return to the facilities where a delicious afternoon snack awaits us.
+To close the first day we will taste the famous Malargüe goat (consult vegetarian, gluten-free menu)
+Duration of the horse ride: 2 and a half/3 hours approx. </p>
+            <p><strong>Horse ride duration:</strong> 2 and a half/3 hours approx.</p>
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 2</h3>
+            <p>After breakfast at the facilities, we will start the second day of horse riding heading to the "enchanted girl" Lagoon. We will ride through the volcano flow where we will have a beautiful panoramic view of the Los Molles Valley. We will stop for lunch with breaded cutlet sandwiches, brief rest and resume the horse ride to return to the facilities for afternoon snack.
+End of service. <strong>End of service.</strong></p>
+        </div>
+    </div>
+
+    <div class="photo-section">
+        <img src="/losmolles.jpg" alt="Riders in the Cordillera - Los Molles" />
+        
+    </div>
+
+    <div class="services-container">
+        <div class="services-included">
+            <h3>✅ INCLUDED SERVICES</h3>
+            <ul>
+                <li>1 night at GR Cabins complex</li>
+                <li>Full board (no drinks at accommodation)</li>
+                <li>Meals and drinks during the horse ride</li>
+                <li>Horses, saddles, guides and horsemen</li>
+                <li>Safety and first aid equipment</li>
+                <li>Satellite communication in case of emergencies</li>
+            </ul>
+        </div>
+        
+        <div class="services-not-included">
+            <h3>❌ SERVICES NOT INCLUDED</h3>
+            <ul>
+                <li>Transfer to the facilities</li>
+                <li>Drinks or extras requested at the restaurant</li>
+                <li>Tips</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="what-to-bring">
+        <h3> WHAT TO BRING?</h3>
+        <ul>
+            <li>- Comfortable clothes for riding (field pants or leggings)</li>
+            <li>- Comfortable footwear (no trekking shoes or boots)</li>
+            <li>- Hat with chin strap</li>
+            <li>- Sunglasses</li>
+            <li>- Sunscreen</li>
+            <li>- Water bottle</li>
+            <li>- Warm clothing (jacket or poncho)</li>
+        </ul>
+    </div>
+
+    <div class="payment-info">
+        <h3>💳 PAYMENT METHODS</h3>
+        <div style="margin: 15px 0;">
+            <h4>How do I reserve my spot for the horse ride?</h4>
+            <p>With a 10% deposit by bank transfer or deposit.</p>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <h4>How do I pay the remaining balance?</h4>
+            <p>The price is only frozen by paying in cash, transfer or US dollar bills at travel time. Consult for installments.</p>
+        </div>
+        
+        <p><strong>⚠️ The deposit is non-refundable if the passenger cannot travel.</strong></p>
+    </div>
+
+    <div class="content-section">
+        <h3>🚗 HOW TO GET TO THE FACILITIES?</h3>
+        <p>Passengers can arrive in their own vehicles. When taking the horse ride, the vehicle remains safe at the GR Cabins complex.</p>
+        <p><strong>Consult for private transfer San Rafael - Los Molles / Los Molles - San Rafael.</strong></p>
+    </div>
+
+</body>
+</html>

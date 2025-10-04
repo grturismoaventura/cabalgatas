@@ -38,7 +38,6 @@ export default function TransferSection() {
                 <h3 className={styles.serviceTitle}>{t('transfer.destinations')}</h3>
                 <div className={styles.serviceDescription}>
                   <p>{t('transfer.comfort')}</p>
-                  <p>{t('transfer.schedule')}</p>
                 </div>
               </div>
             </div>

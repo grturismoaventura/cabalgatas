@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cavalgada Avião dos Uruguaios - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #d9d9d9;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            background: #c86e62;
+            color: #d9d9d9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            object-fit: cover;
+            object-position: center 70%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #d9d9d9;
+            border-radius: 8px;
+            border-left: 5px solid #c86e62;
+            text-align: center;
+            line-height: 0.6;
+        }
+        
+        .content-section li {
+            line-height: 1.4;
+        }
+        
+        .not-included-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #d9d9d9;
+            border-radius: 8px;
+            border-left: 5px solid #c86e62;
+        }
+        
+        .not-included-section h3 {
+            color: #c86e62;
+            margin-top: 0;
+        }
+        
+        .not-included-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .not-included-section li {
+            background: #d9d9d9;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #c86e62;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .not-included-section li:before {
+            content: "✗";
+            color: #c86e62;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .location-section {
+            background: linear-gradient(135deg, #c86e62, #d4776a);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(200, 110, 98, 0.3);
+            border: 2px solid #c86e62;
+            text-transform: uppercase;
+        }
+        
+        .location-section h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+        
+        .location-section p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-transform: uppercase;
+        }
+        
+        .location-section .place-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+                .price-highlight {
+            background: #c86e62;
+            color: #d9d9d9;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .survival-box {
+            background: #c86e62;
+            color: #d9d9d9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #d9d9d9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+                .itinerary-header {
+            background: #c86e62;
+            color: #d9d9d9;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px auto 10px auto;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .day-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #d9d9d9, #d9d9d9);
+            text-align: center;
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+                .day-title {
+            background: #c86e62;
+            color: #d9d9d9;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .include-item {
+            background: #d9d9d9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #c86e62;
+        }
+        
+        .include-item h4 {
+            color: #c86e62;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #d9d9d9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c86e62;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            background: #d9d9d9;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #c86e62;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        li:before {
+            content: "✓";
+            color: #c86e62;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .reflection-box {
+            background: #c86e62;
+            color: black;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+            box-shadow: 0 4px 15px rgba(200, 110, 98, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>CAVALGADA AVIÃO DOS URUGUAIOS</h1>
+            
+        </div>
+    </div>
+
+    <img src="/cabalgata-avion-uruguayos.jpg" alt="Avião dos Uruguaios" class="main-image">
+
+    <div class="survival-box">
+        <h3>EXPEDIÇÃO AO LUGAR DO MILAGRE</h3>
+        <p>O acidente dos Andes de 1972 não apenas nos conta uma história de Sobrevivência, mas também nos deixa uma profunda reflexão sobre resiliência, cooperação, liderança e a importância dos valores humanos em situações extremas para aplicá-las em nossa vida diária.</p>
+    </div>
+
+    <div class="content-section">
+        <h3>HISTÓRIA</h3>
+        <p style="line-height: 1.5;">O voo 571 da Força Aérea Uruguaia se acidentou na Cordilheira dos Andes em 13 de outubro de 1972.</p>
+        <p style="line-height: 1.5;">A bordo estavam 45 pessoas: jogadores da equipe de rugby Old Christians Club de Montevidéu, junto com familiares, amigos e tripulantes.</p>
+        <p style="line-height: 1.5;">16 foram os sobreviventes que passaram 72 dias em condições extremas, até serem resgatados.</p>
+    </div>
+
+    
+
+    <div class="price-highlight">
+        <h3>INFORMAÇÕES DO TOUR ESPECIAL</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <strong>PREÇO</strong><br>
+                $1.080.000<br>
+                <small>por pessoa</small>
+            </div>
+            <div class="price-item">
+                <strong>DURAÇÃO</strong><br>
+                5 DIAS<br>
+                <small>4 noites</small>
+            </div>
+            <div class="price-item">
+                <strong>DIFICULDADE</strong><br>
+                INTERMEDIÁRIO<br>
+                <small>Experiência necessária</small>
+            </div>
+            <div class="price-item">
+                <strong>DATA</strong><br>
+                8 DE FEVEREIRO DE 2026<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="itinerary">
+        
+        
+        <div class="day-item">
+            <div class="day-title">DIA 1</div>
+            <p>A equipe te espera em Los Molles, na parrilla El Montañés depois das 18h. 
+Os guias que te acompanharão nesta experiência te receberão e se apresentarão. Será oferecida uma conversa detalhada sobre o percurso, seguida da "Alfândega", onde selecionaremos todos os elementos necessários para a travessia que levaremos nos dois alforjes. O resto de seus pertences e bagagem ficarão seguros nas instalações. 
+Jantar e pernoite no hostel.</p>
+            
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DIA 2</div>
+            <p>Café da manhã e saída do Club Andino Pehuenche Hostel rumo ao Puesto Araya. Almoço com viandas frias. Com a ajuda dos guias e baqueanos, selecionaremos os cavalos para cada passageiro e começaremos a cavalgada.
+Ao chegar ao local de pernoite, "Três Lagoas", a 2.800 metros sobre o nível do mar, perto da confluência do riacho Barroso e Lágrimas, montaremos as barracas e prepararemos as "camas" com lonas, parte da montaria, saco de dormir e cobertores. Além disso, o assistente do guia preparará o fogo para cozinhar um delicioso churrasco. 
+A noite será sob as estrelas, junto à fogueira, o violão e o silêncio dos Andes.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DIA 3</div>
+            <p>Café da manhã. Saída rumo à cruz comemorativa. Chegada às 14:00h, atingindo uma altura de 3.700 metros. Percorrido do local e almoço frio. 
+Retorno ao acampamento Três Lagoas para lanche, jantar e pernoite.
+</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DIA 4</div>
+            <p>Café da manhã. Desmonte do acampamento. Traslado ao Club Andino Pehuenche Hostel para um banho reparador e jantar de despedida.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DIA 5</div>
+            <p>Café da manhã. Fim dos nossos serviços.</p>
+        </div>
+    </div>
+
+    <!-- Notas importantes -->
+    <div style="text-align: center; margin: 30px 0; color: #333;">
+        <p><strong>NOTA IMPORTANTE</strong></p>
+        <p>O percurso pode variar segundo as condições climáticas.</p>
+        <p>Toda pessoa ao sair para a montanha deve assinar o "termo de responsabilidade".</p>
+    </div>
+
+    <div class="services-container">
+        <div class="content-section">
+            <h3>SERVIÇOS INCLUÍDOS</h3>
+            
+                
+            
+                    <ul>
+                        <li>Recepção em El Montañés, Los Molles.</li>
+                        <li>Verificação do material e vestimenta.</li>
+                        <li>Traslado à zona de El Sosneado.</li>
+                        <li>Bebidas e comidas no acampamento e durante a marcha.</li>
+                        <li>Serviço de banheiro.</li>
+                        <li>Guias e baqueanos especializados.</li>
+                        <li>Mulas de transporte de carga.</li>
+                        <li>Equipamento de primeiros socorros.</li>
+                        <li>Seguro de Responsabilidade Civil.</li>
+                        <li>Permissão de entrada à Bacia do Atuel.</li>
+                        <li>2 noites de hospedagem no Club Andino Pehuenche Hostel, com pensão completa, sem bebidas.</li>
+                        <li>3 dias de travessia a cavalo.</li>
+                        <li>2 noites de hospedagem na montanha com pensão completa.</li>
+                        <li>Comidas e bebidas durante a cavalgada, atividades.</li>
+                        <li>Equipamento completo para a cavalgada: cavalos, montarias e mulas cargueiras.</li>
+                        <li>Comunicação satelital em caso de urgências.</li>
+                    </ul> 
+        </div>
+
+        <div class="not-included-section">
+            <h3>SERVIÇOS NÃO INCLUÍDOS</h3>
+            <ul>
+                <li>Aéreo e/ou ônibus de ida ou volta até o ponto de encontro em Los Molles.</li>
+                <li>Transfers do aeroporto de San Rafael ou Mendoza a Los Molles, ou vice-versa.</li>
+                <li>Gorjetas.</li>
+                <li>Bebidas ou extras solicitados no Hostel e/ou restaurante do mesmo.</li>
+        
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="highlight">
+        <h3>EQUIPAMENTO PARA EXPEDIÇÃO</h3>
+        <div class="includes-grid">
+            
+                
+                <ul>
+                    <li>Roupa térmica de alta montanha</li>
+                    <li>Saco de dormir adequado entre -5º e -10º.</li>
+                    <li>Chapéu com tirantes (são as correias para poder amarrar o chapéu ao pescoço e que não voe com o vento).</li>
+                    <li>Capa para chuva.</li>
+                    <li>Duas mudas de roupa. Recomendamos bombachas de campo ou calças soltas. É melhor viajar com camisas e não com camisetas de gola redonda, as primeiras nos protegem mais do sol. É conveniente levar vários agasalhos finos em vez de um só muito grosso. Os agasalhos de tecido polar são muito adequados, ideais para qualquer estação.</li>
+                    <li>Uma camiseta abrigada, leggings ou cuecas longas.</li>
+                    <li>Jaqueta abrigada e/ou poncho.</li>
+                    <li>Gorro de lã.</li>
+                    <li>Meias térmicas, meias longas ou polainas para cavalgar.</li>
+                    <li>Lenço de pescoço, cachecol e luvas de jardinagem.</li>
+                    <li>Traje de banho e shorts.</li>
+                    <li>Tênis e alpargatas. Para cavalgar não convêm calçados muito largos, como coturnos, podem ficar presos no estribo. Os que estão acostumados podem usar botas de montar. Os tênis devem ser impermeáveis.</li>
+                    <li>Medicamentos pessoais.</li>
+                    <li>Repelente de insetos.</li>
+                    <li>Nenhuma vacina é obrigatória na zona. Porém, como para qualquer atividade ao ar livre, sugerimos aplicar a vacina antitetânica.</li>
+
+                <li>Elementos de higiene pessoal, 2 toalhas (uma para a cavalgada, outra para o hostel). Protetor solar e labial.</li>
+                <li>Óculos de sol com suportes. Sugere-se não usar lentes de contato, já que devido ao vento poderia gerar irritação ocular. Uma boa opção são os óculos de aumento pessoais, com vidro protetor de sol.</li>
+                <li>Lanterna mineira, lanterna que se prende à cabeça mediante uma faixa.</li>
+                <li>Caneca, prato fundo e talheres. Cantil ou garrafa de água. Sacolas de lixo.</li>
+                <li>Câmera fotográfica. Os celulares com câmera podem ser utilizados na medida que tenham bateria.</li>
+                <li>IMPORTANTE: Nós fornecemos alforjes.</li>
+                <li>Não é necessário comprar nem trazer mochilas de viagem.</li>
+                </ul>
+            
+            
+        </div>
+    </div>
+
+    <div class="survival-box">
+        <h3>COMO RESERVO MEU LUGAR PARA A CAVALGADA?</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Com um sinal de 10% em forma de transferência ou depósito bancário.</h4>
+                <p>O sinal não é reembolsável no caso do passageiro não poder viajar, mas pode optar por mudar de data/ano ou transferi-lo para outro passageiro. Levando em conta que nossa moeda se desvaloriza constantemente, têm garantido 10% do preço atualizado.</p>
+            
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>O Saldo Restante como pago?</h4>
+                <p>O Valor unicamente se congela pagando da seguinte forma: 
+<ul>
+<li>Dinheiro ou dólar em notas no momento de viajar.</li>
+<li>Sinal 10% + 3 Parcelas mensais por transferência.</li>
+<li>Outras formas de pagamento: Crédito com juros (Link de Pagamento Mercado Pago).</li>
+</ul>
+</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Os dados que necessitamos são:</h4>
+                <ul>
+                    <li>Nome Completo</li>
+                    <li>Idade</li>
+                    <li>RG</li>
+                    <li>Data de nascimento</li>
+                    <li>Telefone</li>
+                    <li>Regime alimentício: Normal, celíaco, vegetariano, vegano etc.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="location-section">
+        <h3>📍 Localização</h3>
+        <p class="place-name">VALE DE LOS MOLLES</p>
+        <p>17 QUILÔMETROS ANTES DE VALLE DE LAS LEÑAS</p>
+        <p><strong>El montañés</strong></p>
+        <p>ROTA 222 MALARGÜE MENDOZA</p>
+    </div>
+</body>
+</html>

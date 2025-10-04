@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cavalgada de Semana Santa - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .easter-special {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 25px 0;
+        }
+        
+        .itinerary-header {
+            background: #0f8480;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .day-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            color: #0f8480;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f8480;
+        }
+        
+        .include-item h4 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #0f8480;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        li:before {
+            content: "✓";
+            color: #0f8480;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .family-friendly {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>CAVALGADA DE SEMANA SANTA</h1>
+            <h2>Uma experiência especial em família</h2>
+        </div>
+    </div>
+
+    <img src="/cabalgatasemanasanta.png" alt="Cavalgada Semana Santa" class="main-image">
+
+    <div class="easter-special">
+        <h3>🐰 EDIÇÃO ESPECIAL SEMANA SANTA 2025</h3>
+        <p>Uma experiência única especialmente desenhada para desfrutar em família durante as férias de Semana Santa. Perfeito para criar memórias inesquecíveis.</p>
+    </div>
+
+    <div class="content-section">
+        <h3>🏔️ Descrição da Experiência</h3>
+        <p>Uma cavalgada especial desenhada para desfrutar em família durante as férias de Semana Santa. Esta experiência combina a aventura da equitação com momentos de reflexão e conexão familiar nas paisagens mais belas da cordilheira.</p>
+        <p>Ideal para famílias que buscam uma alternativa diferente e significativa para celebrar estas datas especiais, afastando-se da agitação da cidade.</p>
+    </div>
+
+    <div class="family-friendly">
+        <h3>👨‍👩‍👧‍👦 PERFEITO PARA TODA A FAMÍLIA</h3>
+        <p>Especialmente desenhado para crianças a partir de 8 anos e adultos de todas as idades. Não se requer experiência prévia em equitação.</p>
+    </div>
+
+    <div class="price-highlight">
+        <h3>💰 OFERTA ESPECIAL SEMANA SANTA</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <strong>PREÇO ESPECIAL</strong><br>
+                $720.000 CLP<br>
+                <small>por pessoa</small>
+            </div>
+            <div class="price-item">
+                <strong>DURAÇÃO</strong><br>
+                2 DIAS<br>
+                <small>1 noite</small>
+            </div>
+            <div class="price-item">
+                <strong>DIFICULDADE</strong><br>
+                PRINCIPIANTE<br>
+                <small>Adequado para toda a família</small>
+            </div>
+            <div class="price-item">
+                <strong>IDADE MÍNIMA</strong><br>
+                8 ANOS<br>
+                <small>Com adulto responsável</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="itinerary">
+        <div class="itinerary-header">
+            <h3>📅 PROGRAMA ESPECIAL SEMANA SANTA</h3>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">SEXTA-FEIRA SANTA - Dia de Reflexão</div>
+            <p><strong>9:00:</strong> Encontro no ponto de reunião, boas-vindas familiares</p>
+            <p><strong>9:30:</strong> Instruções básicas de equitação para toda a família</p>
+            <p><strong>10:30:</strong> Primeira cavalgada suave pelo Vale da Tranquilidade</p>
+            <p><strong>12:30:</strong> Almoço familiar campestre com comidas tradicionais</p>
+            <p><strong>14:30:</strong> Atividades recreativas para crianças e tempo livre</p>
+            <p><strong>16:00:</strong> Segunda cavalgada rumo ao Mirante da Cruz</p>
+            <p><strong>18:00:</strong> Momento de reflexão familiar ao entardecer</p>
+            <p><strong>19:30:</strong> Jantar tradicional e fogueira familiar</p>
+            <p><strong>21:00:</strong> Descanso em cabanas familiares</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">SÁBADO - Dia de Celebração</div>
+            <p><strong>7:30:</strong> Café da manhã familiar no refúgio</p>
+            <p><strong>9:00:</strong> Cavalgada matutina rumo ao Vale dos Salgueiros</p>
+            <p><strong>11:00:</strong> Jogos tradicionais para toda a família</p>
+            <p><strong>12:30:</strong> Almoço de despedida com churrasco familiar</p>
+            <p><strong>14:00:</strong> Atividades opcionais: pesca familiar ou caminhadas curtas</p>
+            <p><strong>15:30:</strong> Preparação para o retorno e fotos familiares</p>
+            <p><strong>16:00:</strong> Retorno com paradas panorâmicas</p>
+            <p><strong>18:00:</strong> Chegada e despedida familiar</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>✅ O QUE INCLUI O PACOTE FAMILIAR</h3>
+        <div class="includes-grid">
+            <div class="include-item">
+                <h4>🐎 Para Toda a Família</h4>
+                <ul>
+                    <li>Cavalos dóceis para crianças e adultos</li>
+                    <li>Pôneis especiais para os menores</li>
+                    <li>Capacetes de segurança para todos os tamanhos</li>
+                    <li>Guias especializados em famílias</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🍽️ Refeições Especiais</h4>
+                <ul>
+                    <li>Menu especial para crianças</li>
+                    <li>Comidas tradicionais de Semana Santa</li>
+                    <li>Lanches e bebidas ilimitadas</li>
+                    <li>Jantar especial da Sexta-feira Santa</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🏠 Hospedagem Familiar</h4>
+                <ul>
+                    <li>Cabanas familiares confortáveis</li>
+                    <li>Camas individuais para crianças</li>
+                    <li>Banheiros privados por família</li>
+                    <li>Área de jogos para crianças</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🎮 Atividades Especiais</h4>
+                <ul>
+                    <li>Jogos tradicionais familiares</li>
+                    <li>Caça ao tesouro para crianças</li>
+                    <li>Oficina de artesanatos</li>
+                    <li>Fogueira com histórias e canções</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h3>🎒 O QUE TRAZER PARA A FAMÍLIA</h3>
+        <div class="includes-grid">
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>👕 Para Adultos</h4>
+                <ul>
+                    <li>Roupa confortável e calças compridas</li>
+                    <li>Jaqueta leve</li>
+                    <li>Tênis fechados ou botas</li>
+                    <li>Boné e óculos de sol</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>👦 Para Crianças</h4>
+                <ul>
+                    <li>Roupa extra (mudas adicionais)</li>
+                    <li>Tênis fechados confortáveis</li>
+                    <li>Jaqueta abrigada</li>
+                    <li>Brinquedos favoritos para a noite</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="easter-special">
+        <h3>🎁 PROMOÇÕES ESPECIAIS SEMANA SANTA</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>👨‍👩‍👧‍👦 Famílias Numerosas</h4>
+                <p>20% de desconto para famílias de 5 ou mais pessoas</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>👶 Crianças Pequenas</h4>
+                <p>Crianças menores de 12 anos pagam 50% do preço</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>📷 Memórias Especiais</h4>
+                <p>Sessão fotográfica familiar profissional incluída</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>🐰 Surpresa de Páscoa</h4>
+                <p>Caça especial de ovos de Páscoa para as crianças</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="family-friendly">
+        <h3>👶 IDADES E REQUISITOS</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>8-12 anos</h4>
+                <p>Pôneis especiais e acompanhamento constante do guia</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>13-17 anos</h4>
+                <p>Cavalos jovens com supervisão personalizada</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Adultos</h4>
+                <p>Cavalos dóceis, perfeitos para principiantes</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Adultos Maiores</h4>
+                <p>Atividades adaptadas, cavalgadas opcionais</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

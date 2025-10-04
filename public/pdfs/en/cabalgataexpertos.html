@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Experts Horse Ride - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #342c2c);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 8px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 25px 0;
+            padding: 15px;
+            background: #342c2c;
+            border-radius: 8px;
+            border-left: 5px solid #342c2c;
+            text-align: center;
+            line-height: 0.6;
+        }
+        
+        .content-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        /* Estilos específicos para secciones de servicios y equipamiento */
+        .services-included,
+        .what-to-bring {
+            color: white;
+        }
+        
+        .services-included {
+            padding-bottom: 5px;
+        }
+        
+        .services-included h3 {
+            margin-bottom: 10px;
+        }
+        
+        .services-included ul {
+            margin-bottom: 0;
+        }
+        
+        .services-included p,
+        .what-to-bring p {
+            color: white;
+            line-height: 1.4;
+        }
+        
+        .services-included li,
+        .what-to-bring li {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left: 3px solid white;
+        }
+        
+        .services-included li:before,
+        .what-to-bring li:before {
+            color: white;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #342c2c);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .itinerary-header {
+            background: #342c2c;
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .day-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            color: #342c2c;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #342c2c;
+        }
+        
+        .include-item h4 {
+            color: #342c2c;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #342c2c;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #342c2c;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        li:before {
+            content: "✓";
+            color: #342c2c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .equipment-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>EXPERTS HORSE RIDE</h1>
+            <h2>Journey for experienced riders</h2>
+        </div>
+    </div>
+
+    <img src="/expertosinicio.png" alt="Experts Horse Ride" class="main-image">
+
+    <!-- Fechas de temporada -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #342c2c;">
+        <h3 style="color: #342c2c; margin: 0 0 15px 0; font-size: 1.4em;">AVAILABLE DATES</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">December 2025</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">December 11-17</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">February 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">February 13-19</p>
+            </div>
+        </div>
+
+        <p style="margin: 15px 0 0 0; font-style: italic; color: #666; font-size: 0.9em;">
+            <strong>Meeting Point:</strong> GR Montañés Complex - Los Molles</p>
+    </div>
+    <div class="price-highlight">
+        <h3>TOUR INFORMATION</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <strong>DURATION</strong><br>
+                7 DAYS<br>
+                <small>6 NIGHTS</small>
+            </div>
+            <div class="price-item">
+                <strong>LEVEL</strong><br>
+                EXPERTS<br>
+                <small>Experience required</small>
+            </div>
+            <div class="price-item">
+                <strong>SPOTS</strong><br>
+                LIMITED<br>
+                <small>Book in advance</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Requisitos -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #342c2c; border-radius: 8px; border: 2px solid #342c2c;">
+        <h3 style="color: white; margin: 0 0 15px 0; font-size: 1.4em;">MANDATORY REQUIREMENTS</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Experience</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Saddle and unsaddle<br>Experience in horse riding</p>
+            </div>
+
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Age</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Over 18 years old<br>Up to 50 years old</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #342c2c;">
+                <strong style="color: #342c2c;">Documentation</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Medical form signed<br>and stamped by doctor</p>
+            </div>
+        </div>
+    </div>
+
+     
+
+    <div class="itinerary">
+        <div class="itinerary-header">
+            <h3>DETAILED ITINERARY</h3>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 1</div>
+            <p>Reception from 3 PM at the GR Montañés complex. 7:30 PM talk by Guides and packing saddlebags. 9:30 PM dinner. Room delivery at GR cabins.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 2</div>
+            <p>Breakfast from 7:30. 9:30 AM we depart to Portezuelo Ancho by truck (2800masl) where the horses await us. 3 hours journey to Las Yeseras camp, lunch. In the afternoon optional: rest at Laguna del corazón or horse ride to 3 valleys viewpoint (3 hours horse ride). Dinner and Creole campfire.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 3</div>
+            <p>After breakfast we will prepare our equipment to depart to "Arroyo Trujillo", we will cross the rough hill (3300masl). Cold lunch, you can shower in the stream. 3 hours horse ride, we rest in the afternoon, the next day is the longest. Dinner and campfire.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 4</div>
+            <p>We have breakfast and depart to Santa Elena valley, where we will reach the border with Chile (3250masl). 3 hours horse ride. Cold pack lunch. In the afternoon we depart to Laguna de Las Cargas, a paradise in the middle of the Mendoza Andes. 4 hours horse ride.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 5</div>
+            <p>Breakfast and rest in the morning at Valle de Las Cargas. Lunch. In the afternoon we start the return to valle hermoso, 4 hours journey. Dinner and campfire.</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">DAY 6</div>
+            <p>Breakfast and we head to the valle hermoso viewpoint; 3 hours horse ride, where they await us with a delicious lunch and vehicles to transfer us to Los Molles. Restorative shower, afternoon snack and farewell dinner.</p>
+        </div>
+
+        <div class="day-item">
+            <div class="day-title">DAY 7</div>
+            <p>Farewell with a rich and abundant breakfast. End of service.</p>
+        </div>
+    </div>
+
+    <div class="services-grid">
+        <!-- Servicios Incluidos a la izquierda -->
+        <div class="content-section" style="padding: 15px 15px 5px 15px;">
+            <div class="services-included">
+                <h3>WHAT'S INCLUDED</h3>
+                <ul>
+                    <li>Horse and saddle</li>
+                    <li>Logistics with trucks and mules</li>
+                    <li>Meals and drinks</li>
+                    <li>Guides and Horsemen</li>
+                    <li>Satellite communication</li>
+                    <li>Safety and first aid equipment</li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Equipo y Vestimenta a la derecha -->
+        <div class="content-section">
+            <div class="what-to-bring">
+                <h3>EQUIPMENT AND CLOTHING</h3>
+                
+                <div class="equipment-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <!-- Primera columna -->
+                    <div>
+                        <p>-Personal hygiene items</p>
+                        <p>-Bath towel and towel</p>
+                        <p>- Hat with chin straps</p>
+                        <p>- Sunscreen and lip protector</p>
+                        <p>- Buff or neck scarf</p>
+                        <p>- <strong>IMPORTANT</strong> UV protection sunglasses</p>
+                        <p>- Headlamp</p>
+                        <p>- Jacket and fleece</p>
+                        <p>- Leggings</p>
+                        <p>- Long socks</p>
+                    </div>
+                    
+                    <!-- Segunda columna -->
+                    <div>
+                        <p>-Light pants 2 changes (field bombachas)</p>
+                        <p>- Long sleeve shirt</p>
+                        <p>- Light footwear</p>
+                        <p>-Swimwear</p>
+                        <p>-Personal medication</p>
+                        <p>- Insect repellent</p>
+                        <p>-Light gloves</p>
+                        <p>-Plate, cutlery and cup</p>
+                        <p>-Canteens</p>
+                        <p>Sleeping bag -10°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>HOW TO GET TO THE ESTABLISHMENT</h3>
+        
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">Own Vehicle</h4>
+            <p style="line-height: 1.5;">Passengers can arrive in their own vehicles to El Montañés located in Los Molles, Malargüe. When taking the horse ride, the vehicle remains safe on the premises of Club Andino Pehuenche.</p>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">Want to travel by Bus or Plane?</h4>
+            <p style="line-height: 1.5;"><strong>You can do it!</strong> We suggest traveling one day before to San Rafael Mendoza, sleep and the next day take bus from the terminal to Las Leñas - Los Molles.</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p><strong>Company:</strong> Iselin</p>
+                <p><strong>Travel days:</strong> TUESDAY, THURSDAY, SATURDAY</p>
+                <p><strong>Departure time:</strong> 10:00 AM</p>
+                <p><strong>Arrival time in Los Molles:</strong> 12:35 PM</p>
+            </div>
+            
+            <p style="line-height: 1.5;">You can hire it at the counter or buy tickets in advance through some internet platform (Ex: Central de Pasajes, Plataforma 10, etc.)</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                <p style="line-height: 1.5;"><strong>IMPORTANT:</strong> From Mendoza City or Malargüe there are no services to the Los Molles area. If you want info on private transfers, consult us!</p>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">HOW DO I RETURN?</h4>
+            <p style="line-height: 1.5;">Finishing the service on day 6, transportation service will be available to go down to Malargüe. The cost will be paid on site.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 San Rafael from Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">6:00 PM - Iselin</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">6:50 PM - Cata</p>
+                    <p style="margin: 5px 0; line-height: 1.5;">9:15 PM - Buttini</p>
+                </div>
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📍 Mendoza from Malargüe:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;">3:05 PM - Cata</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>COMPLETE MENU</h3>
+        
+        <!-- Tres divs separados: Desayuno, Almuerzo y Cena -->
+        <div style="margin: 20px 0;">
+            <style>
+                @media (max-width: 768px) {
+                    .breakfast-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+            <p style="font-size: 0.9em; color: white; margin: 10px 0; line-height: 1.4;">Consult vegetarian / gluten-free menu</p>
+            <!-- Div 1: Desayunos y Meriendas -->
+            <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c; margin-bottom: 20px;">
+                <h4 style="color: #342c2c; margin: 0 0 15px 0; text-align: center;">BREAKFAST AND SNACKS</h4>
+                
+                <div class="breakfast-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <!-- Columna de comestibles -->
+                    <div>
+                        
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Cookies</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Cake</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Fruit</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Nuts</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Homemade bread</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna de bebidas -->
+                    <div>
+                        
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Mate</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Coffee</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Tea/Mate cocido</li>
+                            <li style="background: #f8f9fa; margin: 5px 0; padding: 8px 12px; border-radius: 4px; border-left: 3px solid #342c2c; line-height: 1.4;">Milk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div 2 y 3: Almuerzos a la izquierda y Cenas a la derecha -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <style>
+                    @media (max-width: 768px) {
+                        .lunch-dinner-row {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+                
+                <!-- Div 2: Almuerzos -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;">LUNCHES</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Cold packed meals</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">For all half days</p>
+                    </div>
+                    
+                    
+                </div>
+
+                <!-- Div 3: Cenas -->
+                <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #342c2c;">
+                    <h4 style="color: #342c2c; margin: 0 0 10px 0;">DINNERS</h4>
+                    
+                    <div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <p style="margin: 0; font-weight: bold; color: #342c2c; line-height: 1.4;">Elaborated meals</p>
+                        <p style="margin: 5px 0 0 0; line-height: 1.4;">Prepared by our guides</p>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagen de galería -->
+    <img src="../galeria.jpg" alt="GR Turismo Aventura Gallery" class="main-image" style="object-position: center 60%;">
+
+    <div class="content-section">
+        <h3>💳 RESERVATION AND PAYMENT INFORMATION</h3>
+        
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">HOW DO I RESERVE MY SPOT?</h4>
+            <p style="line-height: 1.5;">With a 10% deposit by bank transfer or deposit.</p>
+            <p style="line-height: 1.5;"><strong>With 10% of the total value you freeze the rate.</strong></p>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">HOW DO I PAY THE REMAINING BALANCE?</h4>
+            <p style="line-height: 1.5;">The price is only frozen by paying as follows:</p>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                <p><strong>• Cash or US dollar bills</strong> at travel time</p>
+                <p><strong>• 10% deposit + 3 monthly installments</strong> by transfer</p>
+                <p><strong>• Other payment methods:</strong> Credit with interest (Mercado Pago Payment Link)</p>
+            </div>
+            
+            <div style="margin: 15px 0; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                <p style="line-height: 1.5;"><strong>IMPORTANT:</strong> The deposit is non-refundable if the passenger cannot travel, but can choose to change date/year or transfer it to another passenger. Considering that our currency is constantly devaluing, they have guaranteed 10% of the updated price.</p>
+            </div>
+        </div>
+
+        <div style="margin: 20px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #342c2c;">
+            <h4 style="color: #342c2c; margin: 0 0 10px 0;">📞 NECESSARY INFORMATION</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📋 Personal Data:</h5>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Full Name</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• ID</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Date of birth</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• Age</p>
+                    <p style="margin: 2px 0; line-height: 1.5;">• City</p>
+                </div>
+                <div style="padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <h5 style="color: #342c2c; margin: 0 0 8px 0;">📞 Contact:</h5>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Phone:</strong> 3834214287</p>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Email:</strong> grturismoaventura@gmail.com</p>
+                    <p style="margin: 5px 0; line-height: 1.5;"><strong>Dietary Regime:</strong> Normal/Celiac/Vegetarian/Vegan</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

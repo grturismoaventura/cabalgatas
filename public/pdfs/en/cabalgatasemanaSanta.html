@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Easter Week Horseback Ride - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .easter-special {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 25px 0;
+        }
+        
+        .itinerary-header {
+            background: #0f8480;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .day-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            color: #0f8480;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f8480;
+        }
+        
+        .include-item h4 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #0f8480;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        li:before {
+            content: "✓";
+            color: #0f8480;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .family-friendly {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>EASTER WEEK HORSEBACK RIDE</h1>
+            <h2>A special family experience</h2>
+        </div>
+    </div>
+
+    <img src="/cabalgatasemanasanta.png" alt="Easter Week Horseback Ride" class="main-image">
+
+    <div class="easter-special">
+        <h3>🐰 EASTER WEEK 2025 SPECIAL EDITION</h3>
+        <p>A unique experience specially designed to enjoy with family during Easter holidays. Perfect for creating unforgettable memories.</p>
+    </div>
+
+    <div class="content-section">
+        <h3>🏔️ Experience Description</h3>
+        <p>A special horseback ride designed to enjoy with family during Easter holidays. This experience combines the adventure of horseback riding with moments of reflection and family connection in the most beautiful landscapes of the mountain range.</p>
+        <p>Ideal for families looking for a different and meaningful alternative to celebrate these special dates, getting away from the hustle and bustle of the city.</p>
+    </div>
+
+    <div class="family-friendly">
+        <h3>👨‍👩‍👧‍👦 PERFECT FOR THE WHOLE FAMILY</h3>
+        <p>Specially designed for children from 8 years old and adults of all ages. No previous horseback riding experience required.</p>
+    </div>
+
+    <div class="price-highlight">
+        <h3>💰 EASTER WEEK SPECIAL OFFER</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <strong>SPECIAL PRICE</strong><br>
+                $720,000 CLP<br>
+                <small>per person</small>
+            </div>
+            <div class="price-item">
+                <strong>DURATION</strong><br>
+                2 DAYS<br>
+                <small>1 night</small>
+            </div>
+            <div class="price-item">
+                <strong>DIFFICULTY</strong><br>
+                BEGINNER<br>
+                <small>Suitable for the whole family</small>
+            </div>
+            <div class="price-item">
+                <strong>MINIMUM AGE</strong><br>
+                8 YEARS<br>
+                <small>With responsible adult</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="itinerary">
+        <div class="itinerary-header">
+            <h3>📅 EASTER WEEK SPECIAL PROGRAM</h3>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">GOOD FRIDAY - Day of Reflection</div>
+            <p><strong>9:00 AM:</strong> Meeting at the meeting point, family welcome</p>
+            <p><strong>9:30 AM:</strong> Basic horseback riding instructions for the whole family</p>
+            <p><strong>10:30 AM:</strong> First gentle horseback ride through the Valley of Tranquility</p>
+            <p><strong>12:30 PM:</strong> Family countryside lunch with traditional foods</p>
+            <p><strong>2:30 PM:</strong> Recreational activities for children and free time</p>
+            <p><strong>4:00 PM:</strong> Second horseback ride to the Cross Viewpoint</p>
+            <p><strong>6:00 PM:</strong> Family reflection moment at sunset</p>
+            <p><strong>7:30 PM:</strong> Traditional dinner and family bonfire</p>
+            <p><strong>9:00 PM:</strong> Rest in family cabins</p>
+        </div>
+        
+        <div class="day-item">
+            <div class="day-title">SATURDAY - Celebration Day</div>
+            <p><strong>7:30 AM:</strong> Family breakfast at the refuge</p>
+            <p><strong>9:00 AM:</strong> Morning horseback ride to the Willow Valley</p>
+            <p><strong>11:00 AM:</strong> Traditional games for the whole family</p>
+            <p><strong>12:30 PM:</strong> Farewell lunch with family barbecue</p>
+            <p><strong>2:00 PM:</strong> Optional activities: family fishing or short walks</p>
+            <p><strong>3:30 PM:</strong> Preparation for return and family photos</p>
+            <p><strong>4:00 PM:</strong> Return with panoramic stops</p>
+            <p><strong>6:00 PM:</strong> Arrival and family farewell</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>✅ WHAT THE FAMILY PACKAGE INCLUDES</h3>
+        <div class="includes-grid">
+            <div class="include-item">
+                <h4>🐎 For the Whole Family</h4>
+                <ul>
+                    <li>Gentle horses for children and adults</li>
+                    <li>Special ponies for the little ones</li>
+                    <li>Safety helmets for all sizes</li>
+                    <li>Guides specialized in families</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🍽️ Special Meals</h4>
+                <ul>
+                    <li>Special menu for children</li>
+                    <li>Traditional Easter Week foods</li>
+                    <li>Unlimited snacks and drinks</li>
+                    <li>Special Good Friday dinner</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🏠 Family Accommodation</h4>
+                <ul>
+                    <li>Comfortable family cabins</li>
+                    <li>Individual beds for children</li>
+                    <li>Private bathrooms per family</li>
+                    <li>Children's play area</li>
+                </ul>
+            </div>
+            <div class="include-item">
+                <h4>🎮 Special Activities</h4>
+                <ul>
+                    <li>Traditional family games</li>
+                    <li>Treasure hunt for children</li>
+                    <li>Crafts workshop</li>
+                    <li>Bonfire with stories and songs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h3>🎒 WHAT TO BRING FOR THE FAMILY</h3>
+        <div class="includes-grid">
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>👕 For Adults</h4>
+                <ul>
+                    <li>Comfortable clothing and long pants</li>
+                    <li>Light jacket</li>
+                    <li>Closed shoes or boots</li>
+                    <li>Cap and sunglasses</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <h4>👦 For Children</h4>
+                <ul>
+                    <li>Extra clothing (additional changes)</li>
+                    <li>Comfortable closed shoes</li>
+                    <li>Warm jacket</li>
+                    <li>Favorite toys for the night</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="easter-special">
+        <h3>🎁 EASTER WEEK SPECIAL PROMOTIONS</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>👨‍👩‍👧‍👦 Large Families</h4>
+                <p>20% discount for families of 5 or more people</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>👶 Small Children</h4>
+                <p>Children under 12 years pay 50% of the price</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>📷 Special Memories</h4>
+                <p>Professional family photography session included</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>🐰 Easter Surprise</h4>
+                <p>Special Easter egg hunt for children</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="family-friendly">
+        <h3>👶 AGES AND REQUIREMENTS</h3>
+        <div class="includes-grid" style="margin-top: 20px;">
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>8-12 years</h4>
+                <p>Special ponies and constant guide accompaniment</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>13-17 years</h4>
+                <p>Young horses with personalized supervision</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Adults</h4>
+                <p>Gentle horses, perfect for beginners</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; color: #333;">
+                <h4>Elderly Adults</h4>
+                <p>Adapted activities, optional horseback rides</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

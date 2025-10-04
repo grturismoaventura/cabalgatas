@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Andes Crossing - GR Turismo Aventura</title>
+    <style>
+        body {
+            font-family: 'Agrandir';
+            margin: 0;
+            padding: 15px;
+            line-height: 1.3;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-section {
+            position: relative;
+            height: 350px;
+            border-radius: 15px;
+            margin: 15px 0;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 85%;
+            border-radius: 15px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+        
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .title h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title h2 {
+            margin: 5px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 15px auto;
+            display: block;
+        }
+        
+        .content-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #16a085;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .services-included, .services-not-included {
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .services-included {
+            background: linear-gradient(135deg, #0f8480, #20a39e);
+            color: white;
+        }
+        
+        .services-not-included {
+            background: linear-gradient(135deg,#0f8480, #20a39e);
+            color: white;
+        }
+        
+        .services-included h3, .services-not-included h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.4em;
+            text-align: center;
+        }
+        
+        .services-included ul, .services-not-included ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .services-included li, .services-not-included li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            background: transparent !important;
+            border-left: none !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+        }
+        
+        .services-included li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .services-not-included li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .what-to-bring {
+            background: #f8f9fa;
+            color: black;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .payment-info {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #0f8480;
+        }
+        
+        .day-section {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 5px solid #0f8480;
+            text-align: center;
+        }
+        
+        .days-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .day-section h3 {
+            color: #0f8480;
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        
+        .photo-section {
+            margin: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .photo-section img {
+            width: 100%;
+            max-width: 800px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center 80%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container, .days-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .price-highlight h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .itinerary {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .itinerary-header {
+            background: #0f8480;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 15px 0 8px 0;
+        }
+        
+        .day-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+        }
+        
+        .day-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            background: #20a39e;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .include-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f8480;
+        }
+        
+        .include-item h4 {
+            color: #0f8480;
+            margin: 0 0 8px 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .day-section li {
+            background: white;
+            margin: 6px 0;
+            padding: 10px 12px;
+            border-radius: 5px;
+            border-left: 3px solid #16a085;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .day-section li:before {
+            content: "✓";
+            color: #16a085;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        /* Ajustes adicionales para interlineado más compacto */
+        p {
+            margin: 8px 0;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            line-height: 1.2;
+            margin: 10px 0 8px 0;
+        }
+        
+        h4 {
+            line-height: 1.2;
+            margin: 8px 0 6px 0;
+        }
+        
+        .content-section p {
+            margin: 6px 0;
+        }
+        
+        .content-section h3 {
+            margin: 8px 0 6px 0;
+        }
+        
+        .content-section h4 {
+            margin: 6px 0 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/logoGr.png" alt="GR Turismo Aventura" class="logo">
+        <div class="title">
+            <h1>ANDES CROSSING</h1>
+            <h2>7 DAYS 6 NIGHTS</h2>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <img src="/cruceDeLosAndesInicio.png" alt="Andes Crossing" />
+        <div class="hero-overlay">
+           
+        </div>
+    </div>
+
+   
+    <!-- Season dates -->
+    <div style="text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #0f8480;">
+        <h3 style="color: #0f8480; margin: 0 0 15px 0; font-size: 1.4em;">SEASON DATES 2025-2026</h3>
+        
+        <!-- Dates grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">New Year</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Dec 27 to Jan 2</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">January 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Jan 3-9<br>Jan 10-16<br>Jan 17-23<br>Jan 24-30</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">February 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Jan 31 - Feb 6<br>Feb 7-13<br>Feb 14-20<br>Feb 21-27</p>
+            </div>
+            
+            <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #0f8480;">
+                <strong style="color: #0f8480;">March 2026</strong>
+                <p style="margin: 5px 0 0 0; color: #666;">Feb 28 - Mar 6<br>Mar 7-13</p>
+            </div>
+        </div>
+
+        <p style="margin: 15px 0 0 0; font-style: italic; color: #666; font-size: 0.9em;">
+            <strong>Meeting Point:</strong> El Montañés - Los Molles</p>
+        </p>
+    </div>
+
+    <!-- Itinerary days -->
+    <div class="days-container">
+        <div class="day-section">
+            <h3>DAY 1</h3>
+            <p>The GR Turismo Aventura team awaits you in Los Molles from 4 PM for check-in. EVERYONE MUST BRING COMPLETED FORMS (assumption, declaration and medical form). Check-in will be done on a first-come, first-served basis, so we ask for patience.
+Once all passengers have checked in after 6:30 PM, the guides who will accompany you on this experience will greet and introduce themselves. They give a detailed talk about the route, "Customs" will be carried out: which is the selection of all the necessary elements for the journey that we will carry in the two saddlebags. The rest of the belongings and luggage will be kept safe in the facilities.
+(Saturday is generally a very quiet day, where the idea is to get familiar with our riding companions and guides. It's also very important to adapt to the altitude of the place). We will spend our first night at the Hostel facilities where we will share a delicious clay oven roasted chicken. (Our distribution method at the Pehuenche Mountain Refuge is women on one side and men on the other) If you prefer a private place, you can opt for a Cabin a few meters from the Hostel by paying for the stay. (Price to consult)</p>
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 2</h3>
+            <p>After a good early breakfast, we depart by van to Portezuelo Ancho where we meet our travel companions: the horses. With the help of guides and horsemen, the most suitable one for each passenger is carefully selected. We begin the horse ride. Lunch is a cold meal.
+We continue with the horse ride until we reach the camp at Valle Hermoso, where we will spend the first night. Together, we prepare the "beds" with tarps, part of the saddle, sleeping bag and blankets. At the same time, the guide's assistant prepares the fire for cooking. The night will be under the stars, campfire and guitar and the silence of the Andes</p>
+        </div>
+    </div>
+
+    <div class="days-container">
+        <div class="day-section">
+            <h3>DAY 3</h3>
+            <p>After breakfast we will saddle our horses to head west, Trujillo stream, cold lunch, rest and we ride to reach Las Piedras Negras, summer pasture post. There we will spend our third camping night (humid area with grass used for grazing animals in summer). Riding times are maintained around 3 hours in the morning and 2 hours in the afternoon.</p>
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 4</h3>
+            <p>Breakfast. On that day the mules and saddlebags will not be prepared since we go up to the border with Chile (Santa Elena pass, 3080 meters).
+Lunch and return to the camp, where delicious fried cakes await us for a snack. Fourth night under our infinite skies. Dinner. In total we will ride about 6/7 hours.</p>
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 5</h3>
+            <p>Breakfast, we will depart for the Yesera del Medio post, GR Turismo Aventura Base Camp. Lunch. Cobre river crossing. This last night we will have the famous truco tournament, be careful not to lose, since whoever loses washes the dishes...</p>
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 6</h3>
+            <p>Breakfast, last saddling of horses and mules. Already returning we head to our final destination at Portezuelo Ancho, where a delicious lunch, fresh beer and vehicles await us to take us back to the Pehuenche Refuge in Los Molles, which we will be arriving at around 2 PM and 4 PM. Restorative bath. Mid-afternoon. Dinner and farewell.</p>    
+        </div>
+
+        <div class="day-section">
+            <h3>DAY 7</h3>
+            <p>Farewell with a rich and abundant breakfast. End of Service.</p>
+        </div>
+    </div>
+
+    <!-- Centered meals menu -->
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <div class="content-section" style="background: #e8f5f3; border-left: 5px solid #0f8480; max-width: 600px; width: 100%;">
+            <h3>🍽️ MEALS MENU</h3>
+            <div style="margin: 15px 0;">
+                <h4>Lunches (cold meals):</h4>
+                <p>Vegetable, ham and cheese tarts, potato omelet, breaded cutlets, meatballs, chicken roll.</p>
+                
+                <h4>Dinners (hot meals):</h4>
+                <p>Grilled chicken, capellini pasta, goat roast, carbonada, stew.</p>
+                
+                <h4>Breakfasts and afternoon snack:</h4>
+                <p>Tea, milk, coffee, mate, toast, bread, sweet cookies, crackers, jams, etc.</p>
+                
+                <p><strong>Note:</strong> During the stay at the hostel, meals vary. Menu may vary according to availability.</p>
+            </div>
+        </div>
+    </div>
+
+    <p style="text-align: center; font-style: italic; color: #666; margin: 20px 0;">Riding times vary according to guides' decisions. The program may vary according to weather and river conditions.</p>
+
+    <div class="photo-section">
+        <img src="/cruceDeLosAndesInicio.png" alt="Andes Crossing Adventure" />
+    </div>
+
+    <div class="services-container">
+        <div class="services-included">
+            <h3>✅ INCLUDED SERVICES</h3>
+            <ul>
+                <li>2 nights accommodation at Club Andino Pehuenche Hostel</li>
+                <li>4 nights/5 days horseback journey with full board</li>
+                <li>Meals and drinks during the horse ride and activities</li>
+                <li>Access to Valle Las Leñas Field</li>
+                <li>Complete equipment: horses, saddles and pack mules</li>
+                <li>Complete equipment for adventure activities</li>
+                <li>Specialized guides for each activity</li>
+                <li>Satellite communication in case of emergencies</li>
+            </ul>
+        </div>
+        
+        <div class="services-not-included">
+            <h3>❌ SERVICES NOT INCLUDED</h3>
+            <ul>
+                <li>Air and/or bus to the meeting point in Los Molles</li>
+                <li>Transfers from San Rafael or Mendoza airport to Los Molles</li>
+                <li>Tips</li>
+                <li>Drinks or extras requested at the Hostel and/or restaurant</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="what-to-bring">
+        <h3>🎒 NECESSARY EQUIPMENT</h3>
+        <ul>
+            <p>- Sleeping bag suitable for -5º to -10º</p>
+            <p>- Hat with chin strap (straps to tie around neck)</p>
+            <p>- Rain cape</p>
+            <p>- Two changes of clothes (field pants or loose pants)</p>
+            <p>- Shirts (better than round neck t-shirts)</p>
+            <p>- Several thin warm clothes (better than one thick one)</p>
+            <p>- Fleece clothing (ideal for any season)</p>
+            <p>- Warm undershirt, leggings or long underwear</p>
+            <p>- Warm jacket and/or poncho</p>
+            <p>- Wool hat</p>
+            <p>- Thermal socks, long socks or gaiters for riding</p>
+            <p>- Neck scarf, scarf and gardening gloves</p>
+            <p>- Swimsuit and shorts</p>
+            <p>- Waterproof sneakers and espadrilles (not wide boots)</p>
+            <p>- Personal medications</p>
+            <p>- Insect repellent</p>
+            <p>- Personal hygiene items, 2 towels</p>
+            <p>- Sun and lip protection</p>
+            <p>- Sunglasses with holders</p>
+            <p>- Mining flashlight (that attaches to the head)</p>
+            <p>- Mug, deep plate and cutlery</p>
+            <p>- Canteen or water bottle</p>
+            <p>- Waste bags</p>
+            <p>- Camera</p>
+        </ul>
+        <p><strong>IMPORTANT:</strong> We provide saddlebags. No need to buy or bring travel backpacks.</p>
+        <p><strong>Tetanus vaccination recommended.</strong></p>
+    </div>
+
+    <div class="payment-info">
+        <h3>💳 PAYMENT METHODS</h3>
+        <div style="margin: 15px 0;">
+            <h4>How do I reserve my spot for the horse ride?</h4>
+            <p>With a 10% deposit by bank transfer or deposit.</p>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <h4>How do I pay the remaining balance?</h4>
+            <p><strong>The price is only frozen by paying as follows:</strong></p>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <p>Cash or US dollar bills at travel time</p>
+                <p>10% deposit + 3 monthly installments by transfer</p>
+                <p>Credit with interest (Mercado Pago Payment Link)</p>
+            </ul>
+        </div>
+        
+        <p><strong>⚠️ The deposit is non-refundable if the passenger cannot travel</strong>, but can choose to change date/year or transfer it to another passenger. Considering that our currency is constantly devaluing, they have guaranteed 10% of the updated price.</p>
+        
+        <div style="margin: 15px 0;">
+            <h4>Data needed for reservation:</h4>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <p>Full Name</p>
+                <p>Age and ID</p>
+                <p>Date of birth</p>
+                <p>Phone</p>
+                <p>Dietary regime: Normal, celiac, vegetarian, vegan, etc.</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>🚗 HOW TO GET TO THE FACILITIES?</h3>
+        <p><strong>By own vehicle:</strong> Passengers can arrive in their own vehicles. When taking the horse ride, the vehicle remains safe on the Club Andino Pehuenche premises.</p>
+        
+        <h4>🚌 Want to travel by Bus or Plane?</h4>
+        <p>You can do it! We suggest traveling one day before to San Rafael, Mendoza, sleeping and the next day taking a bus from the terminal to Las Leñas - Los Molles.</p>
+        
+        <p><strong>Company:</strong> Iselin</p>
+        <p><strong>Travel days:</strong> TUESDAY, THURSDAY, SATURDAY</p>
+        <p><strong>Departure time:</strong> 10:00 AM</p>
+        <p><strong>Arrival time in Los Molles:</strong> 12:35 PM</p>
+        
+        <p><strong>IMPORTANT:</strong> From Mendoza City or Malargüe there are no services to the Los Molles area. If you want info on private transfers, consult us!</p>
+        
+        <h4>🔄 HOW DO I RETURN?</h4>
+        <p>We finish the program with a good breakfast, then, from 10 AM a van will be available to go down to Malargüe. The cost is paid on site.</p>
+        
+        <p><strong>From Malargüe to San Rafael:</strong> 3:05 PM (Cata), 6:00 PM (Iselin), 6:50 PM (Cata)</p>
+        <p><strong>From Malargüe to Mendoza:</strong> 1:00 PM (Cata), 3:05 PM (Cata)</p>
+        
+        <p><strong>📍 Location:</strong> Valle de Los Molles, 17 kilometers before Valle de Las Leñas. Refugio Pehuenche. Route 222. Malargüe, Mendoza</p>
+    </div>
+</body>
+</html>

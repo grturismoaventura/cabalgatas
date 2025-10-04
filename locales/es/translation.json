@@ -27,58 +27,81 @@
       "cruce-andes": {
         "title": "CRUCE DE LOS ANDES",
         "description": "La travesía más auténtica de los Andes",
-        "duration": "7 DÍAS 6 NOCHES"
+        "duration": "7 DÍAS 6 NOCHES",
+        "fullDescription": "Una experiencia única cruzando la Cordillera de los Andes siguiendo las huellas del General San Martín. Atravesaremos paisajes únicos con vistas panorámicas espectaculares.",
+        "highlights": [
+          "Cruce histórico de la cordillera",
+          "Paisajes únicos de alta montaña",
+          "Experiencia con guías expertos",
+          "Campamento bajo las estrellas"
+        ]
       },
       "avion-uruguayos": {
         "title": "CABALGATA AVIÓN DE LOS URUGUAYOS",
         "description": "Expedición por el escenario de \"La tragedia de Los Andes\"",
-        "duration": "5 DÍAS 4 NOCHES"
+        "duration": "5 DÍAS 4 NOCHES",
+        "fullDescription": "Recorre el lugar donde ocurrió el famoso accidente aéreo de 1972. Una experiencia de supervivencia y reflexión en los Andes.",
+        "highlights": [
+          "Visita al lugar del accidente histórico",
+          "Historia de supervivencia increíble",
+          "Paisajes únicos de alta cordillera",
+          "Experiencia de reflexión profunda"
+        ]
       },
       "los-molles": {
-        "title": "CABALGATA LOS MOLLES",
+        "title": "CABALGATA LOS MOLLES", 
         "description": "Vivir la montaña en dos días únicos",
-        "duration": "2 DÍAS 1 NOCHE"
+        "duration": "2 DÍAS 1 NOCHE",
+        "fullDescription": "Una escapada perfecta para conocer los Andes mendocinos. Ideal para principiantes que buscan una primera experiencia en cabalgata.",
+        "highlights": [
+          "Perfecto para principiantes",
+          "Paisajes accesibles y hermosos",
+          "Experiencia de dos días completos",
+          "Alojamiento cómodo en refugio"
+        ]
       },
       "tres-valles": {
         "title": "CABALGATA 3 VALLES",
         "description": "En esta experiencia de tres días vas a poder disfrutar de la magia de los atardeceres.",
-        "duration": "3 DÍAS 2 NOCHES"
+        "duration": "3 DÍAS 2 NOCHES",
+        "fullDescription": "Recorre tres valles únicos de los Andes mendocinos. Una experiencia intermedia perfecta para disfrutar de la naturaleza.",
+        "highlights": [
+          "Tres valles únicos en un solo viaje",
+          "Atardeceres espectaculares",
+          "Nivel intermedio accesible",
+          "Diversidad de paisajes"
+        ]
       },
       "expertos": {
         "title": "CABALGATA EXPERTOS",
         "description": "Una experiencia desafiante para jinetes experimentados en terreno montañoso.",
-        "duration": "7 DÍAS 6 NOCHES"
+        "duration": "7 DÍAS 6 NOCHES",
+        "fullDescription": "El desafío más grande para jinetes experimentados. Terrenos exigentes y paisajes únicos de alta montaña.",
+        "highlights": [
+          "Solo para jinetes experimentados",
+          "Terrenos desafiantes de alta montaña",
+          "Experiencia de 7 días completos",
+          "Paisajes únicos y remotos"
+        ]
       },
       "semana-santa": {
         "title": "CABALGATA DE SEMANA SANTA",
         "description": "Expedición especial de Semana Santa con actividades culturales y paisajes únicos",
-        "duration": "4 DÍAS 3 NOCHES"
+        "duration": "4 DÍAS 3 NOCHES",
+        "fullDescription": "Una experiencia especial diseñada para Semana Santa. Combina tradición, cultura y la belleza natural de los Andes.",
+        "highlights": [
+          "Experiencia temática de Semana Santa",
+          "Actividades culturales especiales",
+          "Perfecto para familias",
+          "Tradición y naturaleza combinadas"
+        ]
       }
     }
   },
-  "gallery": {
-    "title": "Galería de Momentos",
-    "description": "Revive las mejores experiencias de nuestros visitantes y descubre la belleza natural que te espera en cada cabalgata."
-  },
   "transfer": {
-    "title": "Servicio de Transfer",
+    "title": "TRANSFER",
     "description": "Ofrecemos servicio de traslado desde el aeropuerto hasta nuestras instalaciones",
-    "destinations": "Principales destinos",
-    "comfort": "Viajes cómodos y seguros",
-    "schedule": "Horarios flexibles"
-  },
-  "contact": {
-    "title": "Contactanos",
-    "description": "¿Listos para la aventura? Contáctanos y comencemos a planificar tu próxima expedición.",
-    "phone": "Teléfono",
-    "email": "Email",
-    "whatsapp": "WhatsApp",
-    "instagram": "Instagram"
-  },
-  "footer": {
-    "description": "Aventuras únicas en los Andes mendocinos. Conecta con la naturaleza a través de experiencias auténticas a caballo.",
-    "rights": "Todos los derechos reservados.",
-    "quickLinks": "Enlaces Rápidos",
-    "followUs": "Síguenos"
+    "destinations": "PRINCIPALES DESTINOS",
+    "comfort": "Traslados desde y hacia aeropuerto de Mendoza, San Rafael y Malargüe.\n\nConsultar por más destinos dentro de la Provincia de Mendoza.\n\nConsultar por excursión OFF ROAD 4X4.\n\nConsultar por visitas a Bodegas."
   }
 }
