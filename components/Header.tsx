@@ -47,8 +47,6 @@ export default function Header() {
               <li><a href="#inicio">{t('navigation.home')}</a></li>
               <li><a href="#cabalgatas">{t('navigation.tours')}</a></li>
               <li><a href="#transfer">{t('navigation.transfer')}</a></li>
-              <li><a href="#galeria">{t('navigation.gallery')}</a></li>
-              <li><a href="#contacto">{t('navigation.contact')}</a></li>
             </ul>
 
             {/* Language Selector */}
@@ -71,8 +69,6 @@ export default function Header() {
                 <li><a href="#inicio" onClick={toggleMenu}>{t('navigation.home')}</a></li>
                 <li><a href="#cabalgatas" onClick={toggleMenu}>{t('navigation.tours')}</a></li>
                 <li><a href="#transfer" onClick={toggleMenu}>{t('navigation.transfer')}</a></li>
-                <li><a href="#galeria" onClick={toggleMenu}>{t('navigation.gallery')}</a></li>
-                <li><a href="#contacto" onClick={toggleMenu}>{t('navigation.contact')}</a></li>
               </ul>
               
               {/* Mobile Language Selector */}

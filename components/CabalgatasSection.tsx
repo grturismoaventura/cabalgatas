@@ -4,10 +4,11 @@ import { Clock, DollarSign } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from '@/styles/CabalgatasSection.module.css';
 import '../lib/i18n';
+import '../lib/i18n';
 
 interface CabalgataProps {
   id: string;
-  titleKey: string; // Cambiar para usar claves de traducción
+  titleKey: string;
   descriptionKey: string;
   durationKey: string;
   price: string;
