@@ -166,3 +166,12 @@
     font-size: 1.5rem;
   }
 }
+
+/* Language Selector Styles for Mobile */
+.mobileLanguageSelector {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}

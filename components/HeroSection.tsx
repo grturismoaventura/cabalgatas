@@ -1,7 +1,13 @@
+'use client';
+
 import { ArrowDown, Play, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import styles from '@/styles/HeroSection.module.css';
+import '../lib/i18n';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="inicio" className={styles.hero}>
       {/* EDITABLE: Video de fondo o imagen - Cambiar URL por el contenido deseado */}
@@ -22,12 +28,12 @@ export default function HeroSection() {
 
               {/* EDITABLE: Contenido principal del hero */}
               <h1 className={styles.heroTitle}>
-              
-              <br />GR Turismo Aventura
+                {t('hero.title')}
+                <br />GR Turismo Aventura
               </h1>
 
               <p className={styles.heroSubtitle}>
-                Descubre paisajes únicos en cabalgatas inolvidables por los Andes. 
+                {t('hero.subtitle')} 
                 
               </p> {/* EDITABLE: Descripción principal */}
 
@@ -35,7 +41,7 @@ export default function HeroSection() {
 
               <div className={styles.heroButtons}>
                 <a href="#cabalgatas" className={styles.primaryButton}>
-                  <span>Nuestras cabalgatas</span>
+                  <span>{t('hero.cta')}</span>
                   <ArrowDown size={20} />
                 </a>
             

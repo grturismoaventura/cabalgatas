@@ -1,26 +1,30 @@
+'use client';
+
 import { Clock, DollarSign } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import styles from '@/styles/CabalgatasSection.module.css';
+import '../lib/i18n';
 
 interface CabalgataProps {
   id: string;
-  title: string;
-  description: string;
+  titleKey: string; // Cambiar para usar claves de traducción
+  descriptionKey: string;
+  durationKey: string;
   price: string;
-  duration: string;
   difficulty: 'Principiante' | 'Intermedio' | 'Avanzado'; 
   image: string;
   pdfUrl: string;
-  available?: boolean; // Nueva propiedad para controlar disponibilidad
+  available?: boolean;
 }
 
 // EDITABLE: Datos principales de las cabalgatas
 const cabalgatasData: CabalgataProps[] = [
   {
     id: 'Cruce de los Andes',
-    title: 'CRUCE DE LOS ANDES', 
-    description: 'La travesía más auténtica de los Andes',
+    titleKey: 'cabalgatas.tours.cruce-andes.title',
+    descriptionKey: 'cabalgatas.tours.cruce-andes.description',
+    durationKey: 'cabalgatas.tours.cruce-andes.duration',
     price: '$1.440.000',
-    duration: '7 DIAS 6 NOCHES',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
     pdfUrl: '/pdfs/cruce-de-los-andes.html',
@@ -28,10 +32,10 @@ const cabalgatasData: CabalgataProps[] = [
   },
   {
     id: 'cabalgata-avion-uruguayos',
-    title: 'CABALGATA AVION DE LOS URUGUAYOS',
-    description: 'Expedición por el escenario de "La tragedia de Los Andes"',
+    titleKey: 'cabalgatas.tours.avion-uruguayos.title',
+    descriptionKey: 'cabalgatas.tours.avion-uruguayos.description',
+    durationKey: 'cabalgatas.tours.avion-uruguayos.duration',
     price: '$1.080.000',
-    duration: '5 DIAS 4 NOCHES',
     difficulty: 'Intermedio',
     image: '/avion.png',
     pdfUrl: '/pdfs/cabalgata-avion-uruguayos.html',
@@ -39,10 +43,10 @@ const cabalgatasData: CabalgataProps[] = [
   },
   {
     id: 'cabalgata-los-molles',
-    title: 'CABALGATA LOS MOLLES',
-    description: 'Vivir la montaña en dos días únicos',
+    titleKey: 'cabalgatas.tours.los-molles.title',
+    descriptionKey: 'cabalgatas.tours.los-molles.description',
+    durationKey: 'cabalgatas.tours.los-molles.duration',
     price: '$390.000',
-    duration: '2 DIAS 1 NOCHE',
     difficulty: 'Principiante',
     image: '/cabalgataLosMolles.jpg',
     pdfUrl: '/pdfs/cabalgataLosMolles.html',
@@ -50,10 +54,10 @@ const cabalgatasData: CabalgataProps[] = [
   },
   {
     id: 'cabalgata-3-valles',
-    title: 'CABALGATA 3 VALLES',
-    description: 'En esta experiencia de tres días vas a poder disfrutar de la magia de los atardeceres.',
+    titleKey: 'cabalgatas.tours.tres-valles.title',
+    descriptionKey: 'cabalgatas.tours.tres-valles.description',
+    durationKey: 'cabalgatas.tours.tres-valles.duration',
     price: '$890.000',
-    duration: '3 DIAS 2 NOCHES',
     difficulty: 'Principiante',
     image: '/cabalgata3valles.jpg',
     pdfUrl: '/pdfs/cabalgata3valles.html',
@@ -61,10 +65,10 @@ const cabalgatasData: CabalgataProps[] = [
   },
   {
     id: 'cabalgata-expertos',
-    title: 'CABALGATA EXPERTOS',
-    description: 'Una experiencia desafiante para jinetes experimentados en terreno montañoso.',
+    titleKey: 'cabalgatas.tours.expertos.title',
+    descriptionKey: 'cabalgatas.tours.expertos.description',
+    durationKey: 'cabalgatas.tours.expertos.duration',
     price: '$1.520.000',
-    duration: '7  DIAS 6 NOCHES',
     difficulty: 'Avanzado',
     image: '/expertosinicio.png',
     pdfUrl: '/pdfs/cabalgataexpertos.html',
@@ -72,40 +76,41 @@ const cabalgatasData: CabalgataProps[] = [
   },
   {
     id: 'Semana Santa',
-    title: 'CABALGATA DE SEMANA SANTA', 
-    description: 'Expedición especial de Semana Santa con actividades culturales y paisajes únicos',
+    titleKey: 'cabalgatas.tours.semana-santa.title',
+    descriptionKey: 'cabalgatas.tours.semana-santa.description',
+    durationKey: 'cabalgatas.tours.semana-santa.duration',
     price: 'PROXIMAMENTE',
-    duration: '4 DIAS 3 NOCHES',
     difficulty: 'Principiante',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
-    available: false, // Marcada como no disponible
+    available: false,
   },
 ];
 
 function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
+  const { t } = useTranslation();
+  
   return (
     <div className={styles.cabalgataCard}>
       <div className={styles.cardImage}>
-              <div className={styles.cardImage}>
-                <img 
-                  src={cabalgata.image} 
-                  alt={cabalgata.title}
-                />
-              </div>        {/* Badge de dificultad */}
+        <img 
+          src={cabalgata.image} 
+          alt={t(cabalgata.titleKey)}
+        />
+        {/* Badge de dificultad */}
         <div className={styles.difficultyBadge}>
-          {cabalgata.difficulty}
+          {t(`cabalgatas.difficulty.${cabalgata.difficulty.toLowerCase()}` as any)}
         </div>
       </div>
       
       <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>{cabalgata.title}</h3>
-        <p className={styles.cardDescription}>{cabalgata.description}</p>
+        <h3 className={styles.cardTitle}>{t(cabalgata.titleKey)}</h3>
+        <p className={styles.cardDescription}>{t(cabalgata.descriptionKey)}</p>
         
         <div className={styles.cardDetails}>
           <div className={styles.detail}>
             <Clock size={16} />
-            <span>{cabalgata.duration}</span>
+            <span>{t(cabalgata.durationKey)}</span>
           </div>
         </div>
 
@@ -125,7 +130,7 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
                 rel="noopener noreferrer"
                 className={styles.moreInfoButton}
               >
-                Más Información
+                {t('cabalgatas.viewDetails')}
               </a>
             )
           ) : (
@@ -139,7 +144,7 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
                 color: '#666'
               }}
             >
-              No Disponible
+              {t('cabalgatas.comingSoon')}
             </button>
           )}
         </div>
@@ -149,14 +154,16 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
 }
 
 export default function CabalgatasSection() {
+  const { t } = useTranslation();
+  
   return (
     <section id="cabalgatas" className={styles.cabalgatasSection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Nuestras Cabalgatas </h2> {/* EDITABLE: Título de la sección */}
+          <h2 className={styles.sectionTitle}>{t('cabalgatas.title')}</h2>
           <p className={styles.sectionDescription}>
-            Elegí tu aventura perfecta. Desde cabalgatas de un día hasta expediciones de varios días con acampada bajo las estrellas.
-          </p> {/* EDITABLE: Descripción de la sección */}
+            {t('cabalgatas.description')}
+          </p>
         </div>
 
         <div className={styles.cabalgatasGrid}>
@@ -164,8 +171,6 @@ export default function CabalgatasSection() {
             <CabalgataCard key={cabalgata.id} cabalgata={cabalgata} />
           ))}
         </div>
-
-        
       </div>
     </section>
   );

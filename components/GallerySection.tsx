@@ -1,4 +1,8 @@
+'use client';
+
+import { useTranslation } from 'react-i18next';
 import styles from '@/styles/GallerySection.module.css';
+import '../lib/i18n';
 
 // EDITABLE: Array de imágenes de la galería
 const galleryImages = [
@@ -41,15 +45,16 @@ const galleryImages = [
 ];
 
 export default function GallerySection() {
+  const { t } = useTranslation();
+  
   return (
     <section id="galeria" className={styles.gallerySection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Galería de Momentos</h2> {/* EDITABLE: Título de la galería */}
+          <h2 className={styles.sectionTitle}>{t('gallery.title')}</h2>
           <p className={styles.sectionDescription}>
-            Revive las mejores experiencias de nuestros visitantes y descubre
-            la belleza natural que te espera en cada cabalgata.
-          </p> {/* EDITABLE: Descripción de la galería */}
+            {t('gallery.description')}
+          </p>
         </div>
 
         <div className={styles.galleryGrid}>

@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tours": "Horse Riding",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "transfer": "Transfer"
+  },
+  "hero": {
+    "title": "Discover the Magic of the Mendoza Andes",
+    "subtitle": "Unique horseback expeditions in the Andes Mountains",
+    "cta": "Explore Tours"
+  },
+  "cabalgatas": {
+    "title": "Our Horse Riding Tours",
+    "subtitle": "Unique expeditions in the Andes Mountains",
+    "description": "Experience unforgettable adventures through spectacular landscapes, connecting with nature in its purest state. Our horse riding tours are designed for all experience levels.",
+    "viewDetails": "View Details",
+    "bookNow": "Book Now",
+    "comingSoon": "Coming Soon",
+    "difficulty": {
+      "principiante": "Beginner",
+      "intermedio": "Intermediate",
+      "avanzado": "Advanced"
+    },
+    "tours": {
+      "cruce-andes": {
+        "title": "ANDES CROSSING",
+        "description": "The most authentic Andes crossing experience",
+        "duration": "7 DAYS 6 NIGHTS"
+      },
+      "avion-uruguayos": {
+        "title": "URUGUAYAN PLANE HORSE RIDING",
+        "description": "Expedition through the scenario of \"The Andes Tragedy\"",
+        "duration": "5 DAYS 4 NIGHTS"
+      },
+      "los-molles": {
+        "title": "LOS MOLLES HORSE RIDING",
+        "description": "Experience the mountain in two unique days",
+        "duration": "2 DAYS 1 NIGHT"
+      },
+      "tres-valles": {
+        "title": "3 VALLEYS HORSE RIDING",
+        "description": "In this three-day experience you will be able to enjoy the magic of sunsets.",
+        "duration": "3 DAYS 2 NIGHTS"
+      },
+      "expertos": {
+        "title": "EXPERT HORSE RIDING",
+        "description": "A challenging experience for experienced riders in mountainous terrain.",
+        "duration": "7 DAYS 6 NIGHTS"
+      },
+      "semana-santa": {
+        "title": "EASTER WEEK HORSE RIDING",
+        "description": "Special Easter expedition with cultural activities and unique landscapes",
+        "duration": "4 DAYS 3 NIGHTS"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Gallery of Moments",
+    "description": "Relive the best experiences of our visitors and discover the natural beauty that awaits you on each horse riding tour."
+  },
+  "transfer": {
+    "title": "Transfer Service",
+    "description": "We offer transfer service from the airport to our facilities",
+    "destinations": "Main destinations",
+    "comfort": "Comfortable and safe trips",
+    "schedule": "Flexible schedules"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Ready for adventure? Contact us and let's start planning your next expedition.",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "description": "Unique adventures in the Mendoza Andes. Connect with nature through authentic horseback experiences.",
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us"
+  }
+}

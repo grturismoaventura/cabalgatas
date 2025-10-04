@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "tours": "Cabalgatas",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "transfer": "Transfer"
+  },
+  "hero": {
+    "title": "Descubre la Magia de los Andes Mendocinos",
+    "subtitle": "Expediciones a caballo únicas en la Cordillera de los Andes",
+    "cta": "Explorar Cabalgatas"
+  },
+  "cabalgatas": {
+    "title": "Nuestras Cabalgatas",
+    "subtitle": "Expediciones únicas en la Cordillera de los Andes",
+    "description": "Vive aventuras inolvidables a través de paisajes espectaculares, conectando con la naturaleza en su estado más puro. Nuestras cabalgatas están diseñadas para todos los niveles de experiencia.",
+    "viewDetails": "Ver Detalles",
+    "bookNow": "Reservar Ahora",
+    "comingSoon": "Próximamente",
+    "difficulty": {
+      "principiante": "Principiante",
+      "intermedio": "Intermedio", 
+      "avanzado": "Avanzado"
+    },
+    "tours": {
+      "cruce-andes": {
+        "title": "CRUCE DE LOS ANDES",
+        "description": "La travesía más auténtica de los Andes",
+        "duration": "7 DÍAS 6 NOCHES"
+      },
+      "avion-uruguayos": {
+        "title": "CABALGATA AVIÓN DE LOS URUGUAYOS",
+        "description": "Expedición por el escenario de \"La tragedia de Los Andes\"",
+        "duration": "5 DÍAS 4 NOCHES"
+      },
+      "los-molles": {
+        "title": "CABALGATA LOS MOLLES",
+        "description": "Vivir la montaña en dos días únicos",
+        "duration": "2 DÍAS 1 NOCHE"
+      },
+      "tres-valles": {
+        "title": "CABALGATA 3 VALLES",
+        "description": "En esta experiencia de tres días vas a poder disfrutar de la magia de los atardeceres.",
+        "duration": "3 DÍAS 2 NOCHES"
+      },
+      "expertos": {
+        "title": "CABALGATA EXPERTOS",
+        "description": "Una experiencia desafiante para jinetes experimentados en terreno montañoso.",
+        "duration": "7 DÍAS 6 NOCHES"
+      },
+      "semana-santa": {
+        "title": "CABALGATA DE SEMANA SANTA",
+        "description": "Expedición especial de Semana Santa con actividades culturales y paisajes únicos",
+        "duration": "4 DÍAS 3 NOCHES"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galería de Momentos",
+    "description": "Revive las mejores experiencias de nuestros visitantes y descubre la belleza natural que te espera en cada cabalgata."
+  },
+  "transfer": {
+    "title": "Servicio de Transfer",
+    "description": "Ofrecemos servicio de traslado desde el aeropuerto hasta nuestras instalaciones",
+    "destinations": "Principales destinos",
+    "comfort": "Viajes cómodos y seguros",
+    "schedule": "Horarios flexibles"
+  },
+  "contact": {
+    "title": "Contactanos",
+    "description": "¿Listos para la aventura? Contáctanos y comencemos a planificar tu próxima expedición.",
+    "phone": "Teléfono",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "description": "Aventuras únicas en los Andes mendocinos. Conecta con la naturaleza a través de experiencias auténticas a caballo.",
+    "rights": "Todos los derechos reservados.",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Síguenos"
+  }
+}
