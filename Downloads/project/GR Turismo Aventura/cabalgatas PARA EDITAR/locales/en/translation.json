@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tours": "Horse Riding",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "transfer": "Transfer"
+  },
+  "hero": {
+    "title": "",
+    "subtitle": "Discover unique landscapes on unforgettable horseback rides through the Andes.",
+    "cta": "Our Horse Rides"
+  },
+  "cabalgatas": {
+    "title": "Our Horse Riding Tours",
+    "subtitle": "Unique expeditions in the Andes Mountains",
+    "description": "Choose your perfect adventure. From one-day horse rides to multi-day expeditions with camping under the stars.",
+    "viewDetails": "View Details",
+    "bookNow": "Book Now",
+    "comingSoon": "Coming Soon",
+    "difficulty": {
+      "principiante": "Beginner",
+      "intermedio": "Intermediate",
+      "avanzado": "Advanced"
+    },
+    "tours": {
+      "cruce-andes": {
+        "title": "ANDES CROSSING",
+        "description": "The most authentic Andes crossing experience",
+        "duration": "7 DAYS 6 NIGHTS",
+        "fullDescription": "A unique experience crossing the Andes Mountains following General San Martín's footsteps. We'll traverse unique landscapes with spectacular panoramic views.",
+        "highlights": [
+          "Historic mountain range crossing",
+          "Unique high mountain landscapes", 
+          "Experience with expert guides",
+          "Camping under the stars"
+        ]
+      },
+      "avion-uruguayos": {
+        "title": "URUGUAYAN PLANE HORSE RIDING",
+        "description": "Expedition through the scenario of \"The Andes Tragedy\"",
+        "duration": "5 DAYS 4 NIGHTS",
+        "fullDescription": "Travel to the site where the famous 1972 plane crash occurred. A survival and reflection experience in the Andes.",
+        "highlights": [
+          "Visit to the historic crash site",
+          "Incredible survival story",
+          "Unique high mountain landscapes",
+          "Deep reflection experience"
+        ]
+      },
+      "los-molles": {
+        "title": "LOS MOLLES HORSE RIDING",
+        "description": "Experience the mountain in two unique days",
+        "duration": "2 DAYS 1 NIGHT",
+        "fullDescription": "A perfect getaway to discover the Mendoza Andes. Ideal for beginners seeking their first horseback riding experience.",
+        "highlights": [
+          "Perfect for beginners",
+          "Accessible and beautiful landscapes",
+          "Two full days experience",
+          "Comfortable refuge accommodation"
+        ]
+      },
+      "tres-valles": {
+        "title": "3 VALLEYS HORSE RIDING",
+        "description": "In this three-day experience you will be able to enjoy the magic of sunsets.",
+        "duration": "3 DAYS 2 NIGHTS",
+        "fullDescription": "Explore three unique valleys of the Mendoza Andes. An intermediate experience perfect for enjoying nature.",
+        "highlights": [
+          "Three unique valleys in one trip",
+          "Spectacular sunsets",
+          "Accessible intermediate level",
+          "Diversity of landscapes"
+        ]
+      },
+      "expertos": {
+        "title": "EXPERT HORSE RIDING",
+        "description": "A challenging experience for experienced riders in mountainous terrain.",
+        "duration": "7 DAYS 6 NIGHTS",
+        "fullDescription": "The biggest challenge for experienced riders. Demanding terrain and unique high mountain landscapes.",
+        "highlights": [
+          "Only for experienced riders",
+          "Challenging high mountain terrain",
+          "7 full days experience",
+          "Unique and remote landscapes"
+        ]
+      },
+      "semana-santa": {
+        "title": "EASTER WEEK HORSE RIDING",
+        "description": "Special Easter expedition with cultural activities and unique landscapes",
+        "duration": "4 DAYS 3 NIGHTS",
+        "fullDescription": "A special experience designed for Easter Week. Combines tradition, culture and the natural beauty of the Andes.",
+        "highlights": [
+          "Easter Week themed experience",
+          "Special cultural activities",
+          "Perfect for families",
+          "Tradition and nature combined"
+        ]
+      }
+    }
+  },
+  "transfer": {
+    "title": "TRANSFER",
+    "description": "We offer transfer service from the airport to our facilities",
+    "destinations": "MAIN DESTINATIONS",
+    "comfort": "Transfers to and from Mendoza, San Rafael and Malargüe airports.\n\nInquire about more destinations within the Province of Mendoza.\n\nInquire about 4X4 OFF ROAD excursions.\n\nInquire about winery visits."
+  }
+}
