@@ -80,11 +80,11 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.semana-santa.title',
     descriptionKey: 'cabalgatas.tours.semana-santa.description',
     durationKey: 'cabalgatas.tours.semana-santa.duration',
-    price: 'PROXIMAMENTE',
+    price: '$890.000',
     difficulty: 'Principiante',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
-    available: false,
+    available: true,
   },
 ];
 
