@@ -18,6 +18,8 @@
     "viewDetails": "Ver Detalles",
     "bookNow": "Reservar Ahora",
     "comingSoon": "Próximamente",
+    "priceLabel": "Precio:",
+    "priceConsult": "CONSULTAR",
     "difficulty": {
       "principiante": "Principiante",
       "intermedio": "Intermedio", 

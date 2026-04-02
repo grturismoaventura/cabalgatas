@@ -1,6 +1,6 @@
 'use client';
 
-import { Clock, DollarSign } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from '@/styles/CabalgatasSection.module.css';
 import '../lib/i18n';
@@ -11,7 +11,7 @@ interface CabalgataProps {
   titleKey: string;
   descriptionKey: string;
   durationKey: string;
-  price: string;
+  priceKey: string;
   difficulty: 'Principiante' | 'Intermedio' | 'Avanzado'; 
   image: string;
   pdfUrl: string;
@@ -25,7 +25,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.cruce-andes.title',
     descriptionKey: 'cabalgatas.tours.cruce-andes.description',
     durationKey: 'cabalgatas.tours.cruce-andes.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
     pdfUrl: '/pdfs/cruce-de-los-andes.html',
@@ -36,7 +36,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.avion-uruguayos.title',
     descriptionKey: 'cabalgatas.tours.avion-uruguayos.description',
     durationKey: 'cabalgatas.tours.avion-uruguayos.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Intermedio',
     image: '/avion.png',
     pdfUrl: '/pdfs/cabalgata-avion-uruguayos.html',
@@ -47,7 +47,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.los-molles.title',
     descriptionKey: 'cabalgatas.tours.los-molles.description',
     durationKey: 'cabalgatas.tours.los-molles.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Principiante',
     image: '/cabalgataLosMolles.jpg',
     pdfUrl: '/pdfs/cabalgataLosMolles.html',
@@ -58,7 +58,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.tres-valles.title',
     descriptionKey: 'cabalgatas.tours.tres-valles.description',
     durationKey: 'cabalgatas.tours.tres-valles.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Principiante',
     image: '/cabalgata3valles.jpg',
     pdfUrl: '/pdfs/cabalgata3valles.html',
@@ -69,7 +69,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.expertos.title',
     descriptionKey: 'cabalgatas.tours.expertos.description',
     durationKey: 'cabalgatas.tours.expertos.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Avanzado',
     image: '/expertosinicio.png',
     pdfUrl: '/pdfs/cabalgataexpertos.html',
@@ -80,7 +80,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.semana-santa.title',
     descriptionKey: 'cabalgatas.tours.semana-santa.description',
     durationKey: 'cabalgatas.tours.semana-santa.duration',
-    price: 'PRECIO: CONSULTAR',
+    priceKey: 'cabalgatas.priceConsult',
     difficulty: 'Principiante',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',
@@ -128,9 +128,9 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
         <div className={styles.actionSection}>
           <div className={styles.priceDisplay}>
             {cabalgata.available !== false && (
-              <span className={styles.priceLabel}>Precio:</span>
+              <span className={styles.priceLabel}>{t('cabalgatas.priceLabel')}</span>
             )}
-            <span className={styles.currentPrice}>{cabalgata.price}</span>
+            <span className={styles.currentPrice}>{t(cabalgata.priceKey)}</span>
           </div>
           {cabalgata.available !== false ? (
             cabalgata.pdfUrl && (

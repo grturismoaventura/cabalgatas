@@ -18,6 +18,8 @@
     "viewDetails": "View Details",
     "bookNow": "Book Now",
     "comingSoon": "Coming Soon",
+    "priceLabel": "Price:",
+    "priceConsult": "INQUIRE",
     "difficulty": {
       "principiante": "Beginner",
       "intermedio": "Intermediate",
