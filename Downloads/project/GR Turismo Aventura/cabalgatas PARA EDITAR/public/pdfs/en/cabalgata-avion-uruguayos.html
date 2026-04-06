@@ -193,6 +193,63 @@
             margin: 25px 0;
             text-align: center;
         }
+
+        .what-to-bring,
+        .payment-info,
+        .booking-info {
+            background: #f8f9fa;
+            color: #333;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #c86e62;
+            line-height: 1.5;
+        }
+
+        .what-to-bring h3,
+        .payment-info h3,
+        .booking-info h3 {
+            color: #c86e62;
+            margin-top: 0;
+        }
+
+        .what-to-bring p,
+        .payment-info p,
+        .booking-info p,
+        .payment-info h4,
+        .booking-info h4 {
+            line-height: 1.5;
+        }
+
+        .payment-methods-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c86e62;
+            margin-top: 12px;
+        }
+
+        .booking-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .booking-info li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #c86e62;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .booking-info li:before {
+            content: "✓";
+            color: #c86e62;
+            font-weight: bold;
+            margin-right: 10px;
+        }
         
         .itinerary {
             background: #d9d9d9;
@@ -299,7 +356,7 @@
 <body>
 <div class="payment-info">
         <h3>💳 PAYMENT METHODS</h3>
-        <div style="margin: 15px 0;">
+        <div class="payment-methods-box">
             <h4>How do I reserve my place for the horseback ride?</h4>
             <p>You can do it in the following way:</p>
             <p>Credit card: 3, 6, and 12 installments with interest</p>
@@ -308,20 +365,19 @@
         </div>
         
         <p><strong>⚠️ The deposit is non-refundable if the passenger cannot travel</strong>, but you may change the date/year or transfer it to another passenger. Since our currency is constantly devaluing, you are guaranteed 10% of the updated price.</p>
-        
-        <div style="margin: 15px 0;">
-            <h4>Required data for booking:</h4>
-            <ul style="list-style: disc; margin-left: 20px;">
-                <p>Full name</p>
-                <p>Age and ID</p>
-                <p>Date of birth</p>
-                <p>Phone number</p>
-                <p>Email</p>
-                <p>Dietary requirements: regular, celiac, vegetarian, vegan, etc.</p>
-                <p>Allergies</p>
-                <p>Weight (kg)</p>
-            </ul>
-        </div>
+    </div>
+    <div class="booking-info">
+        <h3>📝 REQUIRED DATA FOR BOOKING</h3>
+        <ul>
+            <li>Full name</li>
+            <li>Age and ID</li>
+            <li>Date of birth</li>
+            <li>Phone number</li>
+            <li>Email</li>
+            <li>Dietary requirements: regular, celiac, vegetarian, vegan, etc.</li>
+            <li>Allergies</li>
+            <li>Weight (kg)</li>
+        </ul>
     </div>
                 <strong>DURATION</strong><br>
                 5 DAYS<br>

@@ -252,16 +252,38 @@
         
         .price-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0;
             margin-top: 10px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 8px;
+            overflow: hidden;
         }
         
         .price-item {
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border-radius: 5px;
+            background: transparent;
+            padding: 14px 10px;
             text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.35);
+        }
+
+        .price-item:last-child {
+            border-right: none;
+        }
+
+        @media (max-width: 768px) {
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.35);
+            }
+
+            .price-item:last-child {
+                border-bottom: none;
+            }
         }
         
         .itinerary {

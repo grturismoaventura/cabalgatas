@@ -187,6 +187,63 @@
             margin: 25px 0;
             text-align: center;
         }
+
+        .what-to-bring,
+        .payment-info,
+        .booking-info {
+            background: #f8f9fa;
+            color: #333;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #c86e62;
+            line-height: 1.5;
+        }
+
+        .what-to-bring h3,
+        .payment-info h3,
+        .booking-info h3 {
+            color: #c86e62;
+            margin-top: 0;
+        }
+
+        .what-to-bring p,
+        .payment-info p,
+        .booking-info p,
+        .payment-info h4,
+        .booking-info h4 {
+            line-height: 1.5;
+        }
+
+        .payment-methods-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c86e62;
+            margin-top: 12px;
+        }
+
+        .booking-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .booking-info li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #c86e62;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .booking-info li:before {
+            content: "✓";
+            color: #c86e62;
+            font-weight: bold;
+            margin-right: 10px;
+        }
         
         .itinerary {
             background: #d9d9d9;
@@ -293,7 +350,7 @@
 <body>
 <div class="payment-info">
         <h3>💳 FORMAS DE PAGAMENTO</h3>
-        <div style="margin: 15px 0;">
+        <div class="payment-methods-box">
             <h4>Como reservo meu lugar para a cavalgada?</h4>
             <p>Você pode fazer da seguinte forma:</p>
             <p>Cartão de crédito: 3, 6 e 12 parcelas com juros</p>
@@ -302,20 +359,19 @@
         </div>
         
         <p><strong>⚠️ O sinal não é reembolsável caso o passageiro não possa viajar</strong>, mas você pode optar por mudar a data/ano ou transferi-lo para outro passageiro. Como nossa moeda se desvaloriza constantemente, está garantido 10% do preço atualizado.</p>
-        
-        <div style="margin: 15px 0;">
-            <h4>Dados necessários para a reserva:</h4>
-            <ul style="list-style: disc; margin-left: 20px;">
-                <p>Nome completo</p>
-                <p>Idade e DNI</p>
-                <p>Data de nascimento</p>
-                <p>Telefone</p>
-                <p>Email</p>
-                <p>Regime alimentar: normal, celíaco, vegetariano, vegano, etc.</p>
-                <p>Alergias</p>
-                <p>Peso (kg)</p>
-            </ul>
-        </div>
+    </div>
+    <div class="booking-info">
+        <h3>📝 DADOS NECESSÁRIOS PARA A RESERVA</h3>
+        <ul>
+            <li>Nome completo</li>
+            <li>Idade e DNI</li>
+            <li>Data de nascimento</li>
+            <li>Telefone</li>
+            <li>Email</li>
+            <li>Regime alimentar: normal, celíaco, vegetariano, vegano, etc.</li>
+            <li>Alergias</li>
+            <li>Peso (kg)</li>
+        </ul>
     </div>
                 <strong>DURAÇÃO</strong><br>
                 5 DIAS<br>
