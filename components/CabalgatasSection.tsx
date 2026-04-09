@@ -25,7 +25,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.cruce-andes.title',
     descriptionKey: 'cabalgatas.tours.cruce-andes.description',
     durationKey: 'cabalgatas.tours.cruce-andes.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.cruce-andes.price',
     difficulty: 'Intermedio',
     image: '/cruceDeLosAndesInicio.png',
     pdfUrl: '/pdfs/cruce-de-los-andes.html',
